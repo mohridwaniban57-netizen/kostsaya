@@ -7,5 +7,4 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 $routes->get('/', 'Home::about_us');
-
-
+$routes->get('kambing-sehat', 'Home::about_us');
