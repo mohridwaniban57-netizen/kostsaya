@@ -105,4 +105,3 @@ $routes->get('/admin/statistik', 'LaporanController::statistik');
 $routes->set404Override('ErrorController::notFound');
 
 ?>
->>>>>>> 5ba0f74ffc782046664d68f7f57423d2d7d69771
