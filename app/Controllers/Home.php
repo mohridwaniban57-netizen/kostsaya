@@ -4,14 +4,25 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
-    public function about_us(): string
+    public function index()
     {
-        return view('about_us');
+        $data = [
+            'title' => 'Beranda - Sistem Kost'
+        ];
+
+        return view('layout/template', $data + [
+            'content' => 'home/index'
+        ]);
     }
 
-    public function index(): string
+    public function tentang()
     {
-        return view('welcome_message');
+        $data = [
+            'title' => 'Tentang Kami'
+        ];
+
+        return view('layout/template', $data + [
+            'content' => 'home/tentang'
+        ]);
     }
 }
-got add

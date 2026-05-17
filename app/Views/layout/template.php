@@ -1,8 +1,7 @@
-<?= $this-> include('layout/header') ?>
+<?= $this->include('layout/header') ?>
 
 <main> 
-    <?= $this-> renderSection('content') ?>
-
+    <?= $this->renderSection('content') ?>
 </main>
 
 <?= $this->include('layout/footer') ?>
