@@ -7,7 +7,7 @@
 </head>
 <body>
     <header>
-        <hi> Ini Header Saya</hi>
+        <h1> Ini Header Saya</h1>
         <hr>
     <header>
 

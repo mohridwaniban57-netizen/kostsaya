@@ -3,6 +3,6 @@
 <main> 
     <?= $this-> renderSection('content') ?>
 
->/main>
+</main>
 
 <?= $this->include('layout/footer') ?>
