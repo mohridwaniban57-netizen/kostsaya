@@ -13,15 +13,18 @@ $routes->get('/', 'Home::index');
 
 
 // ======================================================
+
 // USER / PENCARI KOST
 // ======================================================
 
 // Cari Apa?
+
 $routes->get('/kost-putri', 'KosController::kostPutri');
 
 $routes->get('/kost-putra', 'KosController::kostPutra');
 
 $routes->get('/kost-campuran', 'KosController::kostCampuran');
+
 
 // Detail Kos
 $routes->get('/detail-kos/(:num)', 'KosController::detailKos/$1');
@@ -44,7 +47,6 @@ $routes->get('/dashboard', 'DashboardController::index');
 // Profil User
 $routes->get('/profil', 'UserController::profil');
 
-
 // ======================================================
 // AUTH
 // ======================================================
@@ -56,9 +58,11 @@ $routes->get('/logout', 'AuthController::logout');
 
 
 // ======================================================
+
 // TENTANG WEBSITE
 // ======================================================
 $routes->get('/tentang', 'Home::tentang');
+
 
 
 // ======================================================
@@ -67,6 +71,7 @@ $routes->get('/tentang', 'Home::tentang');
 $routes->get('/pemilik', 'PemilikController::dashboard');
 
 // Kelola Kos
+
 $routes->get('/pemilik/data-kos', 'PemilikKosController::index');
 
 $routes->get('/pemilik/tambah-kos', 'PemilikKosController::tambah');
@@ -94,6 +99,7 @@ $routes->get('/admin/data-user', 'AdminUserController::index');
 $routes->get('/admin/data-pemilik', 'AdminPemilikController::index');
 
 // Statistik
+
 $routes->get('/admin/statistik', 'LaporanController::statistik');
 
 
