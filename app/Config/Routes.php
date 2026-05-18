@@ -6,105 +6,43 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 
-// ======================================================
-// HALAMAN UTAMA
-// ======================================================
 $routes->get('/', 'Home::index');
 
 
-// ======================================================
-// MENU "CARI APA?"
-// ======================================================
-
-// Dropdown Cari Apa?
-$routes->get('/kost-putri', 'KosController::kostPutri');
-
-$routes->get('/kost-putra', 'KosController::kostPutra');
-
-$routes->get('/kost-campuran', 'KosController::kostCampuran');
-
-
-// ======================================================
-// DETAIL KOS
-// ======================================================
-$routes->get('/detail-kos/(:num)', 'KosController::detailKos/$1');
-
-
-// ======================================================
-// FAVORIT
-// ======================================================
-$routes->get('/favorit', 'FavoritController::index');
-
-
-// ======================================================
-// TENTANG
-// ======================================================
-$routes->get('/tentang', 'Home::tentang');
-
-
-// ======================================================
 // AUTH
-// ======================================================
-$routes->get('/login', 'AuthController::login');
-
-$routes->get('/register', 'AuthController::register');
-
-$routes->get('/logout', 'AuthController::logout');
+$routes->get('/login', 'Auth::login');
+$routes->get('/register', 'Auth::register');
 
 
-// ======================================================
-// DASHBOARD USER
-// ======================================================
-$routes->get('/dashboard', 'DashboardController::index');
+// PENCARI
+$routes->group('pencari', function($routes){
+
+    $routes->get('dashboard', 'Pencari::dashboard');
+
+    $routes->get('kost', 'Pencari::kost');
+
+    $routes->get('detail/(:num)', 'Pencari::detail/$1');
+
+    $routes->get('booking', 'Pencari::booking');
+
+    $routes->get('profil', 'Pencari::profil');
+
+});
 
 
-// ======================================================
-// BOOKING
-// ======================================================
-$routes->get('/booking/(:num)', 'BookingController::index/$1');
+// PEMILIK
+$routes->group('pemilik', function($routes){
 
-$routes->get('/checkout', 'BookingController::checkout');
+    $routes->get('dashboard', 'Pemilik::dashboard');
 
-$routes->get('/pembayaran', 'PembayaranController::index');
+    $routes->get('tambah-kost', 'Pemilik::tambahKost');
 
-$routes->get('/riwayat-booking', 'BookingController::riwayat');
+    $routes->get('data-kost', 'Pemilik::dataKost');
 
+    $routes->get('edit-kost/(:num)', 'Pemilik::editKost/$1');
 
-// ======================================================
-// PROFIL USER
-// ======================================================
-$routes->get('/profil', 'UserController::profil');
+    $routes->get('booking', 'Pemilik::booking');
 
+    $routes->get('profil', 'Pemilik::profil');
 
-// ======================================================
-// PEMILIK KOST
-// ======================================================
-$routes->get('/pemilik', 'PemilikController::dashboard');
-
-$routes->get('/pemilik/data-kos', 'PemilikKosController::index');
-
-$routes->get('/pemilik/tambah-kos', 'PemilikKosController::tambah');
-
-$routes->get('/pemilik/edit-kos/(:num)', 'PemilikKosController::edit/$1');
-
-$routes->get('/pemilik/booking', 'PemilikBookingController::index');
-
-
-// ======================================================
-// ADMIN
-// ======================================================
-$routes->get('/admin', 'AdminController::dashboard');
-
-$routes->get('/admin/data-user', 'AdminUserController::index');
-
-$routes->get('/admin/data-pemilik', 'AdminPemilikController::index');
-
-$routes->get('/admin/statistik', 'LaporanController::statistik');
-
-
-// ======================================================
-// ERROR PAGE
-// ======================================================
-$routes->set404Override('ErrorController::notFound');
-
-?>
+});
