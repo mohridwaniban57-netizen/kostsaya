@@ -178,3 +178,10 @@ in SYSTEMPATH\View\View.php on line 487.
 11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 13 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp8\\htdocs\\kost_saya\\public\\index.php')
+CRITICAL - 2026-05-18 16:27:36 --> ParseError: syntax error, unexpected token "<<", expecting end of file
+[Method: CLI, Route: serve]
+in APPPATH\Config\Routes.php on line 13.
+ 1 SYSTEMPATH\CLI\Console.php(41): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\Boot.php(442): CodeIgniter\CLI\Console->run()
+ 3 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+ 4 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
