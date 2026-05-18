@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistem Kost</title>
+    <title>🏠KostSaya</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="<?= base_url('css/style.css'); ?>">
@@ -13,7 +13,7 @@
 <header class="navbar">
 
     <div class="logo">
-        <h1>Sistem Kost</h1>
+        <h1>🏠KostSaya</h1>
     </div>
 
     <nav>
@@ -21,7 +21,7 @@
             <li><a href="#">Beranda</a></li>
             <li><a href="#">Tentang</a></li>
             <li><a href="#">Kamar</a></li>
-            <li><a href="#">Kontak</a></li>
+            <li><a href="#" class="btn-login">Login</a></li>
         </ul>
     </nav>
 

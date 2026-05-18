@@ -2,10 +2,10 @@
 
 <div class="container">
 
-    <h2>Selamat Datang di Sistem Kost</h2>
+    <h2>Temukan Kost Nyaman di Kota Palu</h2>
 
     <p>
-        Website ini digunakan untuk mencari dan mengelola data kost.
+        Kamar nyaman, lokasi strategis, harga terjangkau
     </p>
 
 </div>
