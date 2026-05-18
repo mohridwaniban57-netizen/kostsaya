@@ -68,23 +68,23 @@ $routes->get('/tentang', 'Home::tentang');
 // ======================================================
 // PEMILIK KOST
 // ======================================================
-$routes->get('/pemilik', 'PemilikController::dashboard');
+$routes->get('/pemilik', 'pemilikController::dashboard');
 
 // Kelola Kos
 
-$routes->get('/pemilik/data-kos', 'PemilikKosController::index');
+$routes->get('/pemilik/data-kos', 'pemilikKosController::index');
 
-$routes->get('/pemilik/tambah-kos', 'PemilikKosController::tambah');
+$routes->get('/pemilik/tambah-kos', 'pemilikKosController::tambah');
 
-$routes->get('/pemilik/edit-kos/(:num)', 'PemilikKosController::edit/$1');
+$routes->get('/pemilik/edit-kos/(:num)', 'pemilikKosController::edit/$1');
 
-$routes->get('/pemilik/hapus-kos/(:num)', 'PemilikKosController::hapus/$1');
+$routes->get('/pemilik/hapus-kos/(:num)', 'pemilikKosController::hapus/$1');
 
 // Booking Masuk
-$routes->get('/pemilik/booking', 'PemilikBookingController::index');
+$routes->get('/pemilik/booking', 'pemilikBookingController::index');
 
 // Profil Pemilik
-$routes->get('/pemilik/profil', 'PemilikController::profil');
+$routes->get('/pemilik/profil', 'pemilikController::profil');
 
 
 // ======================================================
