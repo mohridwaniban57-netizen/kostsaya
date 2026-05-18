@@ -7,68 +7,6 @@ use CodeIgniter\Router\RouteCollection;
  */
 
 $routes->get('/', 'Home::index');
-<<<<<<< HEAD
-$routes->get('/tentang', 'Home::tentang');
-
-// ======================================================
-// USER / PENCARI KOST
-// ======================================================
-$routes->get('/kost-putri', 'KosController::kostPutri');
-$routes->get('/kost-putra', 'KosController::kostPutra');
-$routes->get('/kost-campuran', 'KosController::kostCampuran');
-
-// Detail Kos
-$routes->get('/detail-kos/(:num)', 'KosController::detailKos/$1');
-
-// Favorit
-$routes->get('/favorit', 'FavoritController::index');
-
-// Booking
-$routes->get('/booking/(:num)', 'BookingController::index/$1');
-$routes->get('/checkout', 'BookingController::checkout');
-$routes->get('/pembayaran', 'PembayaranController::index');
-$routes->get('/riwayat-booking', 'BookingController::riwayat');
-
-// Dashboard User
-$routes->get('/dashboard', 'DashboardController::index');
-
-// Profil User
-$routes->get('/profil', 'UserController::profil');
-
-// ======================================================
-// AUTH
-// ======================================================
-$routes->get('/login', 'AuthController::login');
-
-$routes->get('/register', 'AuthController::register');
-$routes->get('/logout', 'AuthController::logout');
-
-// ======================================================
-// PEMILIK KOST
-// ======================================================
-$routes->get('/pemilik', 'PemilikController::dashboard');
-$routes->get('/pemilik/profil', 'PemilikController::profil');
-
-$routes->get('/pemilik/data-kos', 'PemilikKosController::index');
-$routes->get('/pemilik/tambah-kos', 'PemilikKosController::tambah');
-$routes->get('/pemilik/edit-kos/(:num)', 'PemilikKosController::edit/$1');
-$routes->get('/pemilik/hapus-kos/(:num)', 'PemilikKosController::hapus/$1');
-
-$routes->get('/pemilik/booking', 'PemilikBookingController::index');
-
-// ======================================================
-// ADMIN
-// ======================================================
-$routes->get('/admin', 'AdminController::dashboard');
-$routes->get('/admin/data-user', 'AdminUserController::index');
-$routes->get('/admin/data-pemilik', 'AdminPemilikController::index');
-$routes->get('/admin/statistik', 'LaporanController::statistik');
-
-// ======================================================
-// ERROR PAGE
-// ======================================================
-$routes->set404Override('ErrorController::notFound');
-=======
 
 
 // AUTH
@@ -108,4 +46,3 @@ $routes->group('pemilik', function($routes){
     $routes->get('profil', 'Pemilik::profil');
 
 });
->>>>>>> ezy
