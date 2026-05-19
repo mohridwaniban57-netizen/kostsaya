@@ -1,43 +1,15 @@
 <?php
 
-namespace App\Database\Migration;
+namespace App\Models;
 
-class CreateUsers extends Migration 
+use CodeIgniter\Model;
+
+class UserModel extends Model
 {
-    public function up()
-    {
-        $this->forge->addField([
-            'id' => [
-                'type' => 'INT',
-                'unsigned' => true,
-                'auto_increment' => true,
-            ],
-            'name' => [
-                'type' => 'STRING',
-                'constraint' => 100,
-            ],
-            'email' => [
-                'type' => 'STRING',
-                'constraint' => 100,
-                'unique' => true,
-            ],
-            'password' => [
-                'type' => 'STRING',
-                'constraint' => 100,
-                'unique' => true,
-            ], 
-            'foto' => [
-                'type' => 'STRING',
-                'constraint' =>
-            ]
+    protected $table = 'users';
+    protected $primaryKey = 'user_id';
 
+    protected $allowedFields = ['nama', 'email', 'password', 'role'];
 
-
-        ])
-
-
-    }
-
-
-
+    protected $useTimestamps = true;
 }
