@@ -6,7 +6,6 @@ class Home extends BaseController
 {
     public function index()
     {
-<<<<<<< HEAD
         $data = [
             'title' => 'Beranda - Sistem Kost'
         ];
@@ -27,8 +26,3 @@ class Home extends BaseController
         ]);
     }
 }
-=======
-        return view('layout/template');
-    }
-}
->>>>>>> ezy
