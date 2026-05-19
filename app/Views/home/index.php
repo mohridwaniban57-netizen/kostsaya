@@ -15,9 +15,13 @@
             dengan lokasi favoritmu.
         </p>
 
+        <!-- SEARCH -->
         <div class="search-box">
 
-            <input type="text" placeholder="Cari kost...">
+            <input
+                type="text"
+                placeholder="Cari lokasi, nama kost, atau area"
+            >
 
             <button>Cari</button>
 
@@ -28,7 +32,10 @@
     <!-- KANAN -->
     <div class="hero-image">
 
-        <img src="<?= base_url('img/kost.jpg'); ?>" alt="Kost">
+        <img
+            src="<?= base_url('img/kost.jpg'); ?>"
+            alt="Kost"
+        >
 
     </div>
 
