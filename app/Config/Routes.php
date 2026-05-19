@@ -56,6 +56,19 @@ $routes->get('/kamar/edit/(:num)', 'Kamar::edit/$1');
 $routes->post('/kamar/update/(:num)', 'Kamar::update/$1');
 
 $routes->get('/kamar/delete/(:num)', 'Kamar::delete/$1');
+$routes->get('/pemilik/data-kos', 'pemilikKosController::index');
+
+$routes->get('/pemilik/tambah-kos', 'pemilikKosController::tambah');
+
+$routes->get('/pemilik/edit-kos/(:num)', 'pemilikKosController::edit/$1');
+
+$routes->get('/pemilik/hapus-kos/(:num)', 'pemilikKosController::hapus/$1');
+
+// Booking Masuk
+$routes->get('/pemilik/booking', 'pemilikBookingController::index');
+
+// Profil Pemilik
+$routes->get('/pemilik/profil', 'pemilikController::profil');
 
 
 // ======================================================
