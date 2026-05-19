@@ -29,9 +29,7 @@
             <li><a href="#">Beranda</a></li>
             <li><a href="#">Favorit</a></li>
             <li><a href="#">Kamar</a></li>
-            <li><a href="#">Fasilitas</a></li>
             <li><a href="#">Kontak</a></li>
-
             <li>
                 <a href="#" class="btn-login">
                     login

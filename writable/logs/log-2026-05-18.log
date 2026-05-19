@@ -1,0 +1,1005 @@
+CRITICAL - 2026-05-18 03:58:36 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\View\View.php(489): CodeIgniter\View\View->render('home/index', null, true)
+ 3 APPPATH\Views\layout\template.php(4): CodeIgniter\View\View->include('home/index')
+ 4 SYSTEMPATH\View\View.php(240): include('D:\\xampp8\\htdocs\\kost_saya\\app\\Views\\layout\\template.php')
+ 5 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('layout/template', [], true)
+ 7 APPPATH\Controllers\Home.php(12): view('layout/template', [...])
+ 8 APPPATH\Controllers\Home.php(23): App\Controllers\Home->render('home/index', 'KostSaya')
+ 9 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp8\\htdocs\\kost_saya\\public\\index.php')
+CRITICAL - 2026-05-18 03:58:37 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\View\View.php(489): CodeIgniter\View\View->render('home/index', null, true)
+ 3 APPPATH\Views\layout\template.php(4): CodeIgniter\View\View->include('home/index')
+ 4 SYSTEMPATH\View\View.php(240): include('D:\\xampp8\\htdocs\\kost_saya\\app\\Views\\layout\\template.php')
+ 5 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('layout/template', [], true)
+ 7 APPPATH\Controllers\Home.php(12): view('layout/template', [...])
+ 8 APPPATH\Controllers\Home.php(23): App\Controllers\Home->render('home/index', 'KostSaya')
+ 9 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp8\\htdocs\\kost_saya\\public\\index.php')
+CRITICAL - 2026-05-18 03:59:00 --> ArgumentCountError: Too few arguments to function CodeIgniter\View\View::include(), 0 passed in D:\xampp8\htdocs\kost_saya\app\Views\layout\template.php on line 4 and at least 1 expected
+[Method: GET, Route: /]
+in SYSTEMPATH\View\View.php on line 487.
+ 1 APPPATH\Views\layout\template.php(4): CodeIgniter\View\View->include()
+ 2 SYSTEMPATH\View\View.php(240): include('D:\\xampp8\\htdocs\\kost_saya\\app\\Views\\layout\\template.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('layout/template', [], true)
+ 5 APPPATH\Controllers\Home.php(12): view('layout/template', [...])
+ 6 APPPATH\Controllers\Home.php(23): App\Controllers\Home->render('home/index', 'KostSaya')
+ 7 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp8\\htdocs\\kost_saya\\public\\index.php')
+CRITICAL - 2026-05-18 03:59:04 --> ArgumentCountError: Too few arguments to function CodeIgniter\View\View::include(), 0 passed in D:\xampp8\htdocs\kost_saya\app\Views\layout\template.php on line 4 and at least 1 expected
+[Method: GET, Route: /]
+in SYSTEMPATH\View\View.php on line 487.
+ 1 APPPATH\Views\layout\template.php(4): CodeIgniter\View\View->include()
+ 2 SYSTEMPATH\View\View.php(240): include('D:\\xampp8\\htdocs\\kost_saya\\app\\Views\\layout\\template.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('layout/template', [], true)
+ 5 APPPATH\Controllers\Home.php(12): view('layout/template', [...])
+ 6 APPPATH\Controllers\Home.php(23): App\Controllers\Home->render('home/index', 'KostSaya')
+ 7 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp8\\htdocs\\kost_saya\\public\\index.php')
+CRITICAL - 2026-05-18 03:59:08 --> ArgumentCountError: Too few arguments to function CodeIgniter\View\View::include(), 0 passed in D:\xampp8\htdocs\kost_saya\app\Views\layout\template.php on line 4 and at least 1 expected
+[Method: GET, Route: /]
+in SYSTEMPATH\View\View.php on line 487.
+ 1 APPPATH\Views\layout\template.php(4): CodeIgniter\View\View->include()
+ 2 SYSTEMPATH\View\View.php(240): include('D:\\xampp8\\htdocs\\kost_saya\\app\\Views\\layout\\template.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('layout/template', [], true)
+ 5 APPPATH\Controllers\Home.php(12): view('layout/template', [...])
+ 6 APPPATH\Controllers\Home.php(23): App\Controllers\Home->render('home/index', 'KostSaya')
+ 7 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp8\\htdocs\\kost_saya\\public\\index.php')
+CRITICAL - 2026-05-18 03:59:09 --> ArgumentCountError: Too few arguments to function CodeIgniter\View\View::include(), 0 passed in D:\xampp8\htdocs\kost_saya\app\Views\layout\template.php on line 4 and at least 1 expected
+[Method: GET, Route: /]
+in SYSTEMPATH\View\View.php on line 487.
+ 1 APPPATH\Views\layout\template.php(4): CodeIgniter\View\View->include()
+ 2 SYSTEMPATH\View\View.php(240): include('D:\\xampp8\\htdocs\\kost_saya\\app\\Views\\layout\\template.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('layout/template', [], true)
+ 5 APPPATH\Controllers\Home.php(12): view('layout/template', [...])
+ 6 APPPATH\Controllers\Home.php(23): App\Controllers\Home->render('home/index', 'KostSaya')
+ 7 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp8\\htdocs\\kost_saya\\public\\index.php')
+CRITICAL - 2026-05-18 03:59:09 --> ArgumentCountError: Too few arguments to function CodeIgniter\View\View::include(), 0 passed in D:\xampp8\htdocs\kost_saya\app\Views\layout\template.php on line 4 and at least 1 expected
+[Method: GET, Route: /]
+in SYSTEMPATH\View\View.php on line 487.
+ 1 APPPATH\Views\layout\template.php(4): CodeIgniter\View\View->include()
+ 2 SYSTEMPATH\View\View.php(240): include('D:\\xampp8\\htdocs\\kost_saya\\app\\Views\\layout\\template.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('layout/template', [], true)
+ 5 APPPATH\Controllers\Home.php(12): view('layout/template', [...])
+ 6 APPPATH\Controllers\Home.php(23): App\Controllers\Home->render('home/index', 'KostSaya')
+ 7 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp8\\htdocs\\kost_saya\\public\\index.php')
+CRITICAL - 2026-05-18 03:59:09 --> ArgumentCountError: Too few arguments to function CodeIgniter\View\View::include(), 0 passed in D:\xampp8\htdocs\kost_saya\app\Views\layout\template.php on line 4 and at least 1 expected
+[Method: GET, Route: /]
+in SYSTEMPATH\View\View.php on line 487.
+ 1 APPPATH\Views\layout\template.php(4): CodeIgniter\View\View->include()
+ 2 SYSTEMPATH\View\View.php(240): include('D:\\xampp8\\htdocs\\kost_saya\\app\\Views\\layout\\template.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('layout/template', [], true)
+ 5 APPPATH\Controllers\Home.php(12): view('layout/template', [...])
+ 6 APPPATH\Controllers\Home.php(23): App\Controllers\Home->render('home/index', 'KostSaya')
+ 7 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp8\\htdocs\\kost_saya\\public\\index.php')
+CRITICAL - 2026-05-18 03:59:10 --> ArgumentCountError: Too few arguments to function CodeIgniter\View\View::include(), 0 passed in D:\xampp8\htdocs\kost_saya\app\Views\layout\template.php on line 4 and at least 1 expected
+[Method: GET, Route: /]
+in SYSTEMPATH\View\View.php on line 487.
+ 1 APPPATH\Views\layout\template.php(4): CodeIgniter\View\View->include()
+ 2 SYSTEMPATH\View\View.php(240): include('D:\\xampp8\\htdocs\\kost_saya\\app\\Views\\layout\\template.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('layout/template', [], true)
+ 5 APPPATH\Controllers\Home.php(12): view('layout/template', [...])
+ 6 APPPATH\Controllers\Home.php(23): App\Controllers\Home->render('home/index', 'KostSaya')
+ 7 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp8\\htdocs\\kost_saya\\public\\index.php')
+CRITICAL - 2026-05-18 03:59:10 --> ArgumentCountError: Too few arguments to function CodeIgniter\View\View::include(), 0 passed in D:\xampp8\htdocs\kost_saya\app\Views\layout\template.php on line 4 and at least 1 expected
+[Method: GET, Route: /]
+in SYSTEMPATH\View\View.php on line 487.
+ 1 APPPATH\Views\layout\template.php(4): CodeIgniter\View\View->include()
+ 2 SYSTEMPATH\View\View.php(240): include('D:\\xampp8\\htdocs\\kost_saya\\app\\Views\\layout\\template.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('layout/template', [], true)
+ 5 APPPATH\Controllers\Home.php(12): view('layout/template', [...])
+ 6 APPPATH\Controllers\Home.php(23): App\Controllers\Home->render('home/index', 'KostSaya')
+ 7 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp8\\htdocs\\kost_saya\\public\\index.php')
+CRITICAL - 2026-05-18 03:59:16 --> ArgumentCountError: Too few arguments to function CodeIgniter\View\View::include(), 0 passed in D:\xampp8\htdocs\kost_saya\app\Views\layout\template.php on line 4 and at least 1 expected
+[Method: GET, Route: /]
+in SYSTEMPATH\View\View.php on line 487.
+ 1 APPPATH\Views\layout\template.php(4): CodeIgniter\View\View->include()
+ 2 SYSTEMPATH\View\View.php(240): include('D:\\xampp8\\htdocs\\kost_saya\\app\\Views\\layout\\template.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('layout/template', [], true)
+ 5 APPPATH\Controllers\Home.php(12): view('layout/template', [...])
+ 6 APPPATH\Controllers\Home.php(23): App\Controllers\Home->render('home/index', 'KostSaya')
+ 7 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp8\\htdocs\\kost_saya\\public\\index.php')
+CRITICAL - 2026-05-18 18:47:10 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 18:47:28 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 18:47:29 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 18:47:30 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 18:51:04 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 18:51:05 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 18:51:06 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 18:51:06 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 18:54:33 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 18:58:20 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 18:58:21 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 18:58:22 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 18:59:17 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 18:59:21 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 18:59:22 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 18:59:22 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 18:59:23 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 18:59:23 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 18:59:23 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 19:14:11 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 19:16:01 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 19:16:03 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 19:18:38 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 19:18:39 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 19:23:29 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 19:23:30 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 19:23:31 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 19:23:31 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 19:23:31 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 19:23:32 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 19:28:18 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 19:28:19 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 19:28:28 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 19:30:59 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 19:31:00 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 19:31:00 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 19:31:01 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 19:31:01 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 19:31:02 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 19:31:14 --> ErrorException: Cannot declare class App\Controllers\Home, because the name is already in use
+[Method: GET, Route: /]
+in APPPATH\Views\home\index.php on line 5.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-05-18 19:31:16 --> ErrorException: Cannot declare class App\Controllers\Home, because the name is already in use
+[Method: GET, Route: /]
+in APPPATH\Views\home\index.php on line 5.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-05-18 19:31:17 --> ErrorException: Cannot declare class App\Controllers\Home, because the name is already in use
+[Method: GET, Route: /]
+in APPPATH\Views\home\index.php on line 5.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-05-18 19:34:08 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout/navbar.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/navbar.php')
+ 2 SYSTEMPATH\View\View.php(489): CodeIgniter\View\View->render('layout/navbar', null, true)
+ 3 APPPATH\Views\home\index.php(2): CodeIgniter\View\View->include('layout/navbar')
+ 4 SYSTEMPATH\View\View.php(240): include('D:\\xampp\\htdocs\\proyek_kostsaya\\app\\Views\\home\\index.php')
+ 5 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('home/index', [], true)
+ 7 APPPATH\Controllers\Home.php(9): view('home/index')
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 19:34:09 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout/navbar.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/navbar.php')
+ 2 SYSTEMPATH\View\View.php(489): CodeIgniter\View\View->render('layout/navbar', null, true)
+ 3 APPPATH\Views\home\index.php(2): CodeIgniter\View\View->include('layout/navbar')
+ 4 SYSTEMPATH\View\View.php(240): include('D:\\xampp\\htdocs\\proyek_kostsaya\\app\\Views\\home\\index.php')
+ 5 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('home/index', [], true)
+ 7 APPPATH\Controllers\Home.php(9): view('home/index')
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 19:34:10 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout/navbar.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/navbar.php')
+ 2 SYSTEMPATH\View\View.php(489): CodeIgniter\View\View->render('layout/navbar', null, true)
+ 3 APPPATH\Views\home\index.php(2): CodeIgniter\View\View->include('layout/navbar')
+ 4 SYSTEMPATH\View\View.php(240): include('D:\\xampp\\htdocs\\proyek_kostsaya\\app\\Views\\home\\index.php')
+ 5 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('home/index', [], true)
+ 7 APPPATH\Controllers\Home.php(9): view('home/index')
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 19:34:10 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout/navbar.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/navbar.php')
+ 2 SYSTEMPATH\View\View.php(489): CodeIgniter\View\View->render('layout/navbar', null, true)
+ 3 APPPATH\Views\home\index.php(2): CodeIgniter\View\View->include('layout/navbar')
+ 4 SYSTEMPATH\View\View.php(240): include('D:\\xampp\\htdocs\\proyek_kostsaya\\app\\Views\\home\\index.php')
+ 5 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('home/index', [], true)
+ 7 APPPATH\Controllers\Home.php(9): view('home/index')
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 19:34:35 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout/navbar.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/navbar.php')
+ 2 SYSTEMPATH\View\View.php(489): CodeIgniter\View\View->render('layout/navbar', null, true)
+ 3 APPPATH\Views\home\index.php(2): CodeIgniter\View\View->include('layout/navbar')
+ 4 SYSTEMPATH\View\View.php(240): include('D:\\xampp\\htdocs\\proyek_kostsaya\\app\\Views\\home\\index.php')
+ 5 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('home/index', [], true)
+ 7 APPPATH\Controllers\Home.php(9): view('home/index')
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 19:34:36 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout/navbar.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/navbar.php')
+ 2 SYSTEMPATH\View\View.php(489): CodeIgniter\View\View->render('layout/navbar', null, true)
+ 3 APPPATH\Views\home\index.php(2): CodeIgniter\View\View->include('layout/navbar')
+ 4 SYSTEMPATH\View\View.php(240): include('D:\\xampp\\htdocs\\proyek_kostsaya\\app\\Views\\home\\index.php')
+ 5 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('home/index', [], true)
+ 7 APPPATH\Controllers\Home.php(9): view('home/index')
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 19:34:37 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout/navbar.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/navbar.php')
+ 2 SYSTEMPATH\View\View.php(489): CodeIgniter\View\View->render('layout/navbar', null, true)
+ 3 APPPATH\Views\home\index.php(2): CodeIgniter\View\View->include('layout/navbar')
+ 4 SYSTEMPATH\View\View.php(240): include('D:\\xampp\\htdocs\\proyek_kostsaya\\app\\Views\\home\\index.php')
+ 5 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('home/index', [], true)
+ 7 APPPATH\Controllers\Home.php(9): view('home/index')
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 20:25:26 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('home/index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('home/index')
+ 4 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 20:25:27 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('home/index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('home/index')
+ 4 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 20:25:28 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('home/index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('home/index')
+ 4 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 20:25:28 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('home/index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('home/index')
+ 4 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 20:25:28 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('home/index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('home/index')
+ 4 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 20:25:29 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('home/index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('home/index')
+ 4 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 20:25:29 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('home/index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('home/index')
+ 4 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 20:25:30 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('home/index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('home/index')
+ 4 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 20:26:27 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('home/index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('home/index')
+ 4 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 20:26:45 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('home/index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('home/index')
+ 4 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 20:26:46 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('home/index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('home/index')
+ 4 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 20:27:35 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('home/index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('home/index')
+ 4 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 20:30:43 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('home/index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('home/index')
+ 4 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 20:30:45 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('home/index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('home/index')
+ 4 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 20:31:34 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('home/index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('home/index')
+ 4 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 20:34:17 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('index')
+ 4 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 20:34:18 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('index')
+ 4 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 20:34:18 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('index')
+ 4 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 20:37:21 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('index')
+ 4 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 20:37:22 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('index')
+ 4 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 20:37:22 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('index')
+ 4 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 20:39:41 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 20:39:43 --> Error: Class "ErrorController" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 921.
+ 1 SYSTEMPATH\CodeIgniter.php(983): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 3 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 5 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 6 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 20:40:14 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('layout', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('layout')
+ 4 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 20:40:15 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('layout', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('layout')
+ 4 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 20:41:41 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('index')
+ 4 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
+CRITICAL - 2026-05-18 20:41:42 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('index')
+ 4 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\proyek_kostsaya\\public\\index.php')
