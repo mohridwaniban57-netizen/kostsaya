@@ -19,7 +19,7 @@
         alt="Logo KostSaya"
     >
 
-    <h1>KostSaya</h1>
+    <h1>KostSaya 1</h1>
 
 </div>
 

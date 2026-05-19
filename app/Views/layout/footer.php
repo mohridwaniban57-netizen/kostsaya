@@ -1,5 +1,5 @@
 <footer class="footer">
-    <p>© <?= date('Y') ?> KostSaya - Sistem Booking Kost</p>
+    <p>© <?= date('Y') ?> KostSaya 1- Sistem Booking Kost</p>
 </footer>
 
 <!-- JS -->
