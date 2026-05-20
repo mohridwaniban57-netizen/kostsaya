@@ -8,7 +8,7 @@
         <h2>
             Temukan kost terbaik <br>
             sesuai kebutuhanmu
-        </h2>
+        </h2> 
 
         <p>
             Cari kost nyaman, aman, dan dekat
