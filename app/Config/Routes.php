@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 use CodeIgniter\Router\RouteCollection;
@@ -104,3 +105,5 @@ $routes->get('/admin/booking', 'Admin::booking');
 $routes->get('/admin/approve/(:num)', 'Admin::approve/$1');
 
 $routes->get('/admin/reject/(:num)', 'Admin::reject/$1');
+=======
+>>>>>>> 389a9032cdc2dd3952ec0efc2cf2ef63d253def8
