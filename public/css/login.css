@@ -1,0 +1,143 @@
+/* BODY */
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+/* LOGIN PAGE */
+.login-page{
+    position: relative;
+    min-height: 100vh;
+
+    background-image: url('../img/login.jpg');
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 120px 20px 40px;
+}
+
+/* DARK OVERLAY */
+.background-overlay{
+    position: absolute;
+    inset: 0;
+    background: rgba(17, 24, 39, 0.45);
+}
+
+/* CONTAINER */
+.login-container{
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 450px;
+}
+
+/* CARD */
+.login-card{
+    background: rgba(255,255,255,0.95);
+
+    backdrop-filter: blur(5px);
+
+    padding: 50px;
+
+    border-radius: 30px;
+
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+
+/* TITLE */
+.login-card h2{
+    font-size: 50px;
+    color: #1e293b;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+/* SUBTITLE */
+.subtitle{
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 35px;
+    font-size: 16px;
+}
+
+/* INPUT GROUP */
+.input-group{
+    margin-bottom: 25px;
+}
+
+/* LABEL */
+label{
+    display: block;
+    margin-bottom: 10px;
+
+    color: #1e293b;
+    font-weight: 600;
+}
+
+/* INPUT */
+.form-control{
+    width: 100%;
+    height: 58px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 16px;
+
+    padding: 15px;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+
+    box-shadow: none !important;
+}
+
+/* FOCUS */
+.form-control:focus{
+    border-color: #2563eb;
+    outline: none;
+}
+
+/* BUTTON */
+.btn-login-custom{
+    width: 100%;
+    height: 58px;
+
+    border: none;
+    border-radius: 16px;
+
+    background: #111827;
+    color: white;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* HOVER BUTTON */
+.btn-login-custom:hover{
+    background: #2563eb;
+}
+
+/* RESPONSIVE */
+@media(max-width: 576px){
+
+    .login-card{
+        padding: 35px;
+        border-radius: 24px;
+    }
+
+    .login-card h2{
+        font-size: 38px;
+    }
+
+}

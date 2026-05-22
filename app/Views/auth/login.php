@@ -1,52 +1,63 @@
 <?= $this->include('layout/header') ?>
 <?= $this->include('layout/navbar') ?>
 
-<div class="container mt-5">
+<section class="login-page">
 
-    <div class="row justify-content-center">
+    <!-- BACKGROUND IMAGE -->
+    <div class="background-overlay"></div>
 
-        <div class="col-md-5">
+    <!-- LOGIN CARD -->
+    <div class="login-container">
 
-            <div class="card shadow">
+        <div class="login-card">
 
-                <div class="card-body">
+            <h2>Login</h2>
 
-                    <h3 class="text-center mb-4">
-                        Login
-                    </h3>
+            <p class="subtitle">
+                Masuk untuk melanjutkan pencarian kost terbaikmu.
+            </p>
 
-                    <form action="/login" method="post">
+            <form action="/login" method="post">
 
-                        <div class="mb-3">
-                            <label>Email</label>
+                <!-- EMAIL -->
+                <div class="input-group">
 
-                            <input type="email"
-                                   name="email"
-                                   class="form-control">
-                        </div>
+                    <label>Email</label>
 
-                        <div class="mb-3">
-                            <label>Password</label>
-
-                            <input type="password"
-                                   name="password"
-                                   class="form-control">
-                        </div>
-
-                        <button class="btn btn-dark w-100">
-                            Login
-                        </button>
-
-                    </form>
+                    <input
+                        type="email"
+                        name="email"
+                        class="form-control"
+                        placeholder="Masukkan email"
+                    >
 
                 </div>
 
-            </div>
+                <!-- PASSWORD -->
+                <div class="input-group">
+
+                    <label>Password</label>
+
+                    <input
+                        type="password"
+                        name="password"
+                        class="form-control"
+                        placeholder="Masukkan password"
+                    >
+
+                </div>
+
+                <!-- BUTTON -->
+                <button type="submit" class="btn-login-custom">
+                    Login
+                </button>
+
+            </form>
 
         </div>
 
     </div>
 
-</div>
+</section>
 
 <?= $this->include('layout/footer') ?>
