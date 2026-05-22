@@ -59,7 +59,7 @@ class CreateKosTable extends Migration
 
         $this->forge->addForeignKey(
             'pemilik_id',
-            'user',
+            'users',
             'user_id',
             'CASCADE',
             'CASCADE'
