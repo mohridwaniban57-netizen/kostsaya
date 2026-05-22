@@ -18,11 +18,8 @@ git<!DOCTYPE html>
 
     <nav>
         <ul class="menu">
-            <li><a href="#">Beranda</a></li>
-            <li><a href="#">Favorit</a></li>
-            <li><a href="#">Kamar</a></li>
-            <li><a href="#">Kontak</a></li>
-            <li><a href="#" class="btn-login">Login</a></li>
+        
+            <li><a href="#" class="btn-pusat">Pusat Bantuan or FAQ </a></li>
         </ul>
     </nav>
 

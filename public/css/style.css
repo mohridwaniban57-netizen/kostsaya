@@ -34,7 +34,7 @@ body{
 
     z-index: 1000;
 
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 10px rgba(125, 55, 55, 0.08);
 }
 
 /* LOGO */
@@ -52,7 +52,7 @@ body{
 
 .logo h1{
     font-size: 28px;
-    color: #1e293b;
+    color: #122141;
 
     margin-left: -5px;
 }
@@ -71,7 +71,7 @@ body{
 .menu li a{
     text-decoration: none;
 
-    color: #1e293b;
+    color: auto;
 
     font-size: 18px;
     font-weight: 500;
@@ -81,20 +81,26 @@ body{
 
 /* HOVER */
 .menu li a:hover{
-    color: #2563eb;
+    color: #b4e610;
 }
 
-/* BUTTON LOGIN */
-.btn-login{
-    background: #111827;
+/* BUTTON PUSAT */
+.btn-pusat{
+    background:  #122141;
 
-    color: white !important;
+    color: white;
 
     padding: 12px 25px;
 
     border-radius: 15px;
 
     font-weight: bold;
+}
+
+.btn-pusat:hover{
+    background: #122141;
+
+    color: white !important;
 }
 
 /* HERO */
@@ -119,7 +125,7 @@ body{
 .hero-text h2{
     font-size: 60px;
 
-    color: #1e293b;
+    color: #122141;
 
     line-height: 1.2;
 
@@ -150,10 +156,11 @@ body{
     object-fit: cover;
 }
 
-/* SEARCH BOX */
 .search-box{
     display: flex;
+    justify-content: center;
     align-items: center;
+    gap: 10px;
 
     background: white;
 
@@ -183,13 +190,14 @@ body{
 
 /* BUTTON */
 .search-box button{
-    background: #111827;
+    margin-left: 30px;
+    background: #122141;
 
     color: white;
 
     border: none;
 
-    padding: 18px 30px;
+    padding: 18px 70px;
 
     border-radius: 12px;
 
@@ -208,13 +216,15 @@ body{
 
 /* FOOTER */
 .footer{
-    background: #2563eb;
+    background: #ffffff;
 
-    color: white;
+    color:  #122141;
 
     text-align: center;
 
     padding: 18px;
 
     margin-top: auto;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    
 }

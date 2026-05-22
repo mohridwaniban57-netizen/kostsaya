@@ -20,10 +20,10 @@
 
             <input
                 type="text"
-                placeholder="Cari lokasi, nama kost, atau area"
+                placeholder="Jelajahi dan temukan kost impianmu !!"
             >
 
-            <button>Cari</button>
+            <button>Jelajahi</button>
 
         </div>
 
