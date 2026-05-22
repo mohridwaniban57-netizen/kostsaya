@@ -1,9 +1,4 @@
 vendor
 .env
-<<<<<<< HEAD
-writable/logs/*
-!writable/logs/index.html
-=======
-
-writable/logs/*
->>>>>>> 8e22e768172cb47de7b9fa26a622a406809ec7af
+ writable/logs/*
+ !writable/logs/index.html
