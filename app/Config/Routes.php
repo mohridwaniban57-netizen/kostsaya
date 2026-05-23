@@ -12,7 +12,7 @@ $routes->get('/', 'Home::index');
 // AUTH
 // ======================================================
 
-$routes->get('/login', 'Auth::login');
+$routes->get('/login', 'Login::login');
 $routes->post('/login', 'Auth::attempt');
 
 $routes->get('/register', 'Auth::register');
