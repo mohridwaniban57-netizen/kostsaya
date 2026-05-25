@@ -114,5 +114,6 @@ $routes->get('/admin/reject/(:num)', 'Admin::reject/$1');
 // favorit
 
 $routes->get('/favorit', 'Favorit::index');
+$routes->get('/detail/(:num)', 'Favorit::detail/$1');
 
 # BERANDA

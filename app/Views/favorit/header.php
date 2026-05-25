@@ -851,7 +851,7 @@ body{
 
     <div class="logo">
 
-        <img src="img/logo.png"alt="Logo KostSaya"class="logo-img">
+       <img src="<?= base_url('img/logo.png'); ?>" alt="Logo KostSaya" class="logo-img">
 
         <h1>
             Kost<span>Saya</span>
