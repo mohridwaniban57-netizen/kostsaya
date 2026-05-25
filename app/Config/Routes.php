@@ -12,7 +12,7 @@ $routes->get('/', 'Home::index');
 // AUTH
 // ======================================================
 
-$routes->get('/login', 'Auth::login');
+$routes->get('/login', 'Login::login');
 $routes->post('/login', 'Auth::attempt');
 
 $routes->get('/register', 'Auth::register');
@@ -107,8 +107,3 @@ $routes->get('/admin/reject/(:num)', 'Admin::reject/$1');
 // favorit
 
 $routes->get('/favorit', 'Favorit::index');
-
-
-// beranda
-
-$routes->get('/beranda', 'beranda::index');

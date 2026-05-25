@@ -1,12 +1,12 @@
 <?php
 namespace App\Controllers;
 
-use App\Models\KostModel;
+use App\Models\KosModel;
 
 class Kost extends BaseController {
 
     public function index() {
-        $model = new KostModel();
+        $model = new KosModel();
 
         return view('kost/index', [
             'kost' => $model->findAll()
@@ -14,7 +14,7 @@ class Kost extends BaseController {
     }
 
     public function detail($id) {
-        $model = new KostModel();
+        $model = new KosModel();
 
         return view('kost/detail', [
             'kost' => $model->find($id)
@@ -22,11 +22,11 @@ class Kost extends BaseController {
     }
 
     public function store() {
-        $model = new KostModel();
+        $model = new KosModel();
 
         $model->save([
             'nama_kost' => $this->request->getPost('nama_kost'),
-            'alamat' => $this->request->getPost('alamat'),
+            'lokasi' => $this->request->getPost('lokasi'),
             'harga' => $this->request->getPost('harga')
         ]);
 
