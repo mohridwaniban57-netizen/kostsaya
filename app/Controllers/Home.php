@@ -8,5 +8,8 @@ class Home extends BaseController
         return view('home/index');
        
     }
+    public function proses() {
+        return redirect()->to('beranda');
+    }
 }
 

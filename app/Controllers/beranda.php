@@ -8,4 +8,14 @@ class beranda extends BaseController
     {
         return view('beranda/beranda');
     }
+    public function proses() {
+        return redirect()->to('login');
+    }
+    public function proses1() {
+        return redirect()->to('favorit');
+    }
+    public function proses2() {
+        return redirect()->to('register');
+    }
+
 }

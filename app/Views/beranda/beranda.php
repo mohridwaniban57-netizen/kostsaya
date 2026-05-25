@@ -1,24 +1,22 @@
-<!-- =========================
-     BERANDA KOST MODERN
-     Elegant • Premium • Animated
-========================= -->
-
 <?= $this->include('favorit/header'); ?>
 
+<!-- FONT AWESOME -->
 <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
+<!-- GOOGLE FONT -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet">
 
 <style>
 
 /* =========================
-   ROOT COLOR
+   ROOT
 ========================= */
 
 :root{
-
     --primary:#2563eb;
     --secondary:#7c3aed;
     --dark:#0f172a;
@@ -43,7 +41,6 @@ html{
 }
 
 body{
-
     background:var(--bg);
     overflow-x:hidden;
     color:var(--dark);
@@ -54,7 +51,6 @@ body{
 ========================= */
 
 .bg-grid{
-
     position:fixed;
     inset:0;
 
@@ -63,28 +59,20 @@ body{
     linear-gradient(90deg, rgba(15,23,42,.03) 1px, transparent 1px);
 
     background-size:40px 40px;
-
     z-index:-3;
 }
 
 .blur{
-
     position:fixed;
-
     border-radius:50%;
-
     filter:blur(120px);
-
     z-index:-2;
-
     opacity:.25;
 }
 
 .blur-1{
-
     width:400px;
     height:400px;
-
     background:var(--primary);
 
     top:-120px;
@@ -94,10 +82,8 @@ body{
 }
 
 .blur-2{
-
     width:450px;
     height:450px;
-
     background:var(--secondary);
 
     bottom:-150px;
@@ -107,21 +93,70 @@ body{
 }
 
 /* =========================
+   SEARCH BAR
+========================= */
+
+.search-navbar{
+    width:100%;
+    padding:30px 80px 0;
+    position:relative;
+    z-index:10;
+}
+
+.search-trigger{
+    width:100%;
+    max-width:850px;
+
+    margin:auto;
+
+    height:70px;
+
+    border:none;
+    border-radius:22px;
+
+    background:rgba(255,255,255,.9);
+    backdrop-filter:blur(20px);
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    padding:0 28px;
+
+    font-size:17px;
+    color:var(--text);
+
+    cursor:pointer;
+
+    box-shadow:
+    0 15px 45px rgba(0,0,0,.06);
+
+    transition:.3s;
+}
+
+.search-trigger:hover{
+    transform:translateY(-3px);
+}
+
+.search-trigger i{
+    color:var(--primary);
+    font-size:20px;
+}
+
+/* =========================
    HERO
 ========================= */
 
 .hero{
-
     min-height:100vh;
 
     display:flex;
     align-items:center;
 
-    padding:120px 80px;
+    padding:80px 80px 120px;
 }
 
 .hero-wrapper{
-
     width:100%;
     max-width:1400px;
 
@@ -134,14 +169,13 @@ body{
     align-items:center;
 }
 
-/* LEFT */
+/* HERO LEFT */
 
 .hero-text{
     animation:fadeLeft 1s ease;
 }
 
 .hero-badge{
-
     display:inline-flex;
     align-items:center;
     gap:10px;
@@ -151,20 +185,17 @@ body{
     border-radius:50px;
 
     background:rgba(255,255,255,.8);
-
     backdrop-filter:blur(20px);
 
     box-shadow:0 10px 30px rgba(0,0,0,.05);
 
     color:var(--primary);
-
     font-weight:600;
 
     margin-bottom:30px;
 }
 
 .hero-text h1{
-
     font-size:72px;
     line-height:1.1;
 
@@ -174,7 +205,6 @@ body{
 }
 
 .hero-text h1 span{
-
     background:linear-gradient(
         135deg,
         var(--primary),
@@ -186,29 +216,36 @@ body{
 }
 
 .hero-text p{
-
     font-size:18px;
-
     line-height:1.9;
 
     color:var(--text);
 
     margin-bottom:40px;
-
     max-width:650px;
 }
 
 /* BUTTON */
 
 .hero-btns{
-
     display:flex;
     gap:20px;
     flex-wrap:wrap;
 }
 
-.btn-primary{
+.btn-primary,
+.btn-outline{
+    padding:18px 34px;
 
+    border-radius:18px;
+
+    text-decoration:none;
+    font-weight:600;
+
+    transition:.4s;
+}
+
+.btn-primary{
     background:linear-gradient(
         135deg,
         var(--primary),
@@ -217,40 +254,17 @@ body{
 
     color:white;
 
-    padding:18px 34px;
-
-    border-radius:18px;
-
-    text-decoration:none;
-
-    font-weight:600;
-
-    transition:.4s;
-
     box-shadow:
     0 15px 35px rgba(37,99,235,.25);
 }
 
 .btn-primary:hover{
-
     transform:translateY(-6px);
 }
 
 .btn-outline{
-
     background:white;
-
     color:var(--dark);
-
-    padding:18px 34px;
-
-    border-radius:18px;
-
-    text-decoration:none;
-
-    font-weight:600;
-
-    transition:.4s;
 
     border:1px solid rgba(0,0,0,.05);
 
@@ -258,21 +272,17 @@ body{
 }
 
 .btn-outline:hover{
-
     transform:translateY(-6px);
 }
 
-/* RIGHT */
+/* HERO RIGHT */
 
 .hero-image{
-
     position:relative;
-
     animation:fadeUp 1s ease;
 }
 
 .hero-image img{
-
     width:100%;
     height:650px;
 
@@ -287,7 +297,6 @@ body{
 /* FLOAT CARD */
 
 .float-card{
-
     position:absolute;
 
     left:-50px;
@@ -296,7 +305,6 @@ body{
     width:320px;
 
     background:rgba(255,255,255,.9);
-
     backdrop-filter:blur(20px);
 
     border-radius:30px;
@@ -310,115 +318,30 @@ body{
 }
 
 .float-card h3{
-
     font-size:28px;
-
     margin-bottom:12px;
 }
 
 .float-card p{
-
     color:var(--text);
-
     line-height:1.8;
 
     margin-bottom:25px;
 }
 
 .float-stats{
-
     display:flex;
     justify-content:space-between;
 }
 
 .float-stats h4{
-
     font-size:24px;
-
     color:var(--primary);
 }
 
 .float-stats span{
-
     font-size:13px;
-
     color:var(--text);
-}
-
-/* =========================
-   SEARCH
-========================= */
-
-.search-box{
-
-    max-width:1200px;
-
-    margin:auto;
-
-    margin-top:-60px;
-
-    position:relative;
-    z-index:10;
-}
-
-.search-wrapper{
-
-    background:white;
-
-    padding:25px;
-
-    border-radius:30px;
-
-    display:grid;
-    grid-template-columns:1fr 1fr auto;
-
-    gap:20px;
-
-    box-shadow:
-    0 25px 60px rgba(0,0,0,.08);
-}
-
-.search-input{
-
-    background:#f8fafc;
-
-    border:none;
-
-    padding:20px;
-
-    border-radius:18px;
-
-    outline:none;
-
-    font-size:16px;
-}
-
-.search-btn{
-
-    border:none;
-
-    background:linear-gradient(
-        135deg,
-        var(--primary),
-        var(--secondary)
-    );
-
-    color:white;
-
-    padding:20px 35px;
-
-    border-radius:18px;
-
-    font-weight:600;
-
-    cursor:pointer;
-
-    transition:.4s;
-}
-
-.search-btn:hover{
-
-    transform:scale(1.03);
 }
 
 /* =========================
@@ -426,28 +349,21 @@ body{
 ========================= */
 
 .section{
-
     padding:120px 80px;
 }
 
 .section-title{
-
     text-align:center;
-
     margin-bottom:70px;
 }
 
 .section-title h2{
-
     font-size:52px;
-
     margin-bottom:15px;
 }
 
 .section-title p{
-
     color:var(--text);
-
     font-size:18px;
 }
 
@@ -456,7 +372,6 @@ body{
 ========================= */
 
 .feature-grid{
-
     display:grid;
 
     grid-template-columns:
@@ -466,9 +381,7 @@ body{
 }
 
 .feature{
-
     background:rgba(255,255,255,.8);
-
     backdrop-filter:blur(20px);
 
     border-radius:35px;
@@ -484,19 +397,16 @@ body{
 }
 
 .feature:hover{
-
     transform:translateY(-10px);
 }
 
 .feature-icon{
-
     width:90px;
     height:90px;
 
     border-radius:28px;
 
-    background:
-    linear-gradient(
+    background:linear-gradient(
         135deg,
         rgba(37,99,235,.15),
         rgba(124,58,237,.15)
@@ -514,16 +424,12 @@ body{
 }
 
 .feature h3{
-
     font-size:28px;
-
     margin-bottom:15px;
 }
 
 .feature p{
-
     color:var(--text);
-
     line-height:1.9;
 }
 
@@ -532,7 +438,6 @@ body{
 ========================= */
 
 .kost-grid{
-
     display:grid;
 
     grid-template-columns:
@@ -542,11 +447,9 @@ body{
 }
 
 .kost-card{
-
     background:white;
 
     border-radius:35px;
-
     overflow:hidden;
 
     transition:.5s;
@@ -556,17 +459,14 @@ body{
 }
 
 .kost-card:hover{
-
     transform:translateY(-12px);
 }
 
 .kost-image{
-
     overflow:hidden;
 }
 
 .kost-image img{
-
     width:100%;
     height:260px;
 
@@ -576,33 +476,26 @@ body{
 }
 
 .kost-card:hover img{
-
     transform:scale(1.08);
 }
 
 .kost-content{
-
     padding:30px;
 }
 
 .kost-content h3{
-
     font-size:28px;
-
     margin-bottom:10px;
 }
 
 .kost-content p{
-
     color:var(--text);
-
     line-height:1.8;
 
     margin-bottom:20px;
 }
 
 .tags{
-
     display:flex;
     gap:10px;
     flex-wrap:wrap;
@@ -611,13 +504,11 @@ body{
 }
 
 .tags span{
-
     padding:10px 15px;
 
     border-radius:14px;
 
     background:#eff6ff;
-
     color:var(--primary);
 
     font-size:13px;
@@ -625,25 +516,20 @@ body{
 }
 
 .kost-footer{
-
     display:flex;
     justify-content:space-between;
     align-items:center;
 }
 
 .price{
-
     font-size:26px;
-
     font-weight:700;
 }
 
 .detail-btn{
-
     border:none;
 
     background:var(--dark);
-
     color:white;
 
     padding:14px 24px;
@@ -656,7 +542,6 @@ body{
 }
 
 .detail-btn:hover{
-
     background:var(--primary);
 }
 
@@ -665,9 +550,7 @@ body{
 ========================= */
 
 .cta{
-
-    background:
-    linear-gradient(
+    background:linear-gradient(
         135deg,
         var(--primary),
         var(--secondary)
@@ -678,7 +561,6 @@ body{
     border-radius:45px;
 
     text-align:center;
-
     color:white;
 
     box-shadow:
@@ -686,21 +568,17 @@ body{
 }
 
 .cta h2{
-
     font-size:58px;
-
     margin-bottom:20px;
 }
 
 .cta p{
-
     max-width:700px;
 
     margin:auto;
+    margin-bottom:40px;
 
     line-height:1.9;
-
-    margin-bottom:40px;
 
     color:#e2e8f0;
 }
@@ -710,7 +588,6 @@ body{
 ========================= */
 
 @keyframes fadeLeft{
-
     from{
         opacity:0;
         transform:translateX(-60px);
@@ -720,11 +597,9 @@ body{
         opacity:1;
         transform:translateX(0);
     }
-
 }
 
 @keyframes fadeUp{
-
     from{
         opacity:0;
         transform:translateY(60px);
@@ -734,11 +609,9 @@ body{
         opacity:1;
         transform:translateY(0);
     }
-
 }
 
 @keyframes floating{
-
     0%{
         transform:translateY(0px);
     }
@@ -750,11 +623,9 @@ body{
     100%{
         transform:translateY(0px);
     }
-
 }
 
 @keyframes floatY{
-
     0%{
         transform:translateY(0);
     }
@@ -766,11 +637,9 @@ body{
     100%{
         transform:translateY(0);
     }
-
 }
 
 @keyframes floatX{
-
     0%{
         transform:translateX(0);
     }
@@ -782,7 +651,6 @@ body{
     100%{
         transform:translateX(0);
     }
-
 }
 
 /* =========================
@@ -807,6 +675,10 @@ body{
         padding:90px 25px;
     }
 
+    .search-navbar{
+        padding:20px 20px 0;
+    }
+
     .hero-text h1{
         font-size:42px;
     }
@@ -815,23 +687,16 @@ body{
         font-size:38px;
     }
 
-    .search-wrapper{
-        grid-template-columns:1fr;
-    }
-
     .float-card{
-
         position:relative;
 
         width:100%;
 
         left:0;
-
         bottom:0;
 
         margin-top:20px;
     }
-
 }
 
 </style>
@@ -843,13 +708,16 @@ body{
 <div class="blur blur-1"></div>
 <div class="blur blur-2"></div>
 
+<!-- SEARCH BAR -->
+
+
 <!-- HERO -->
 
 <section class="hero">
 
     <div class="hero-wrapper">
 
-        <!-- LEFT -->
+        <!-- HERO LEFT -->
 
         <div class="hero-text">
 
@@ -862,20 +730,16 @@ body{
             </div>
 
             <h1>
-
                 Temukan Hunian
                 <span>Modern</span>
                 dan Nyaman
                 Untuk Hidup Lebih Produktif
-
             </h1>
 
             <p>
-
                 Kost premium dengan fasilitas lengkap,
                 desain elegan, dan lokasi strategis
                 untuk mahasiswa maupun pekerja modern.
-
             </p>
 
             <div class="hero-btns">
@@ -884,7 +748,7 @@ body{
                     Cari Kost
                 </a>
 
-                <a href="#" class="btn-outline">
+                <a href="favorit" class="btn-outline">
                     Lihat Favorit
                 </a>
 
@@ -892,21 +756,19 @@ body{
 
         </div>
 
-        <!-- RIGHT -->
+        <!-- HERO RIGHT -->
 
         <div class="hero-image">
 
-            <img src="<?= base_url('img/orange.jpg'); ?>">
+            <img src="<?= base_url('img/orange.jpg'); ?>" alt="Kost Modern">
 
             <div class="float-card">
 
                 <h3>Kost Elite Residence</h3>
 
                 <p>
-
                     Hunian eksklusif dengan suasana nyaman,
                     aman, dan modern.
-
                 </p>
 
                 <div class="float-stats">
@@ -936,30 +798,6 @@ body{
 
 </section>
 
-<!-- SEARCH -->
-
-<div class="search-box">
-
-    <div class="search-wrapper">
-
-        <input
-        type="text"
-        class="search-input"
-        placeholder="Cari lokasi kost">
-
-        <input
-        type="text"
-        class="search-input"
-        placeholder="Cari fasilitas">
-
-        <button class="search-btn">
-            Cari Sekarang
-        </button>
-
-    </div>
-
-</div>
-
 <!-- FEATURE -->
 
 <section class="section">
@@ -976,12 +814,12 @@ body{
 
     <div class="feature-grid">
 
+        <!-- FEATURE 1 -->
+
         <div class="feature">
 
             <div class="feature-icon">
-
                 <i class="fa-solid fa-shield-heart"></i>
-
             </div>
 
             <h3>Keamanan Premium</h3>
@@ -993,12 +831,12 @@ body{
 
         </div>
 
+        <!-- FEATURE 2 -->
+
         <div class="feature">
 
             <div class="feature-icon">
-
                 <i class="fa-solid fa-wifi"></i>
-
             </div>
 
             <h3>Fasilitas Lengkap</h3>
@@ -1010,12 +848,12 @@ body{
 
         </div>
 
+        <!-- FEATURE 3 -->
+
         <div class="feature">
 
             <div class="feature-icon">
-
                 <i class="fa-solid fa-location-dot"></i>
-
             </div>
 
             <h3>Lokasi Strategis</h3>
@@ -1047,13 +885,12 @@ body{
 
     <div class="kost-grid">
 
-        <!-- CARD -->
-
         <div class="kost-card">
 
             <div class="kost-image">
 
-                <img src="<?= base_url('img/orange.jpg'); ?>">
+                <img src="<?= base_url('img/orange.jpg'); ?>"
+                     alt="Kost Menteng">
 
             </div>
 
@@ -1102,16 +939,12 @@ body{
         <h2>Mulai Cari Kost Impianmu</h2>
 
         <p>
-
             Temukan tempat tinggal modern,
             nyaman, dan elegan untuk hidup lebih produktif.
-
         </p>
 
         <a href="#" class="btn-outline">
-
             Mulai Sekarang
-
         </a>
 
     </div>

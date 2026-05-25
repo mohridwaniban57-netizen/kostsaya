@@ -880,11 +880,11 @@ body{
 
     <div class="right-menu">
 
-        <a href="#" class="login-btn">
+        <a href="login" class="login-btn">
             Masuk
         </a>
 
-        <a href="#" class="register-btn">
+        <a href="register" class="register-btn">
             Daftar
         </a>
 

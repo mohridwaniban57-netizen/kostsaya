@@ -4,9 +4,16 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-
+#HOME LE
 $routes->get('/', 'Home::index');
+$routes->post('/awal/proses', 'Home::proses');
 
+
+# BERANDA
+$routes->get('/beranda', 'beranda::index');
+$routes->post('/beranda/proses', 'beranda::proses');
+$routes->post('/beranda/proses1', 'beranda::proses1');
+$routes->post('/beranda/proses2', 'beranda::proses2');
 
 // ======================================================
 // AUTH
@@ -107,3 +114,5 @@ $routes->get('/admin/reject/(:num)', 'Admin::reject/$1');
 // favorit
 
 $routes->get('/favorit', 'Favorit::index');
+
+# BERANDA

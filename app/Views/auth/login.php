@@ -47,11 +47,27 @@
                     >
 
                 </div>
+                <div class="form-group">
+                            <label for="role">Login sebagai</label>
+                            <select id="role" name="role" class="form-control" required>
+                                <option value="" disabled selected hidden>Pilih peran</option>
+                                <option value="pmi">Admin</option>
+                                <option value="rumah_sakit">Pamilik kost</option>
+                                <option value="admin">Pencari kost</option>
+                            </select>
+                </div>
 
                 <!-- BUTTON -->
                 <button type="submit" class="btn-login-custom">
                     Login
                 </button>
+                <!-- BUTTON -->
+
+                <!-- REGISTER LINK -->
+                <p class="register-text">
+                    Belum punya akun?
+                    <a href="/register">Daftar sekarang</a>
+                </p>
 
             </form>
 

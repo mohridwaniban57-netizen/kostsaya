@@ -5,5 +5,33 @@
 <!-- JS -->
 <script src="<?= base_url('assets/js/script.js'); ?>"></script>
 
+<style>
+    .footer{
+        background: #1e293b;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 50px;
+    }
+
+    .footer p{
+        font-size: 15px;
+        letter-spacing: 0.5px;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width: 768px){
+
+        .footer{
+            padding: 18px 10px;
+        }
+
+        .footer p{
+            font-size: 14px;
+        }
+
+    }
+</style>
+
 </body>
 </html>
