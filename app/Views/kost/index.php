@@ -32,14 +32,14 @@
                         </h5>
 
                         <p>
-                            <?= $k['alamat'] ?>
+                            <?= $k['lokasi'] ?>
                         </p>
 
                         <p>
                             Rp<?= number_format($k['harga']) ?>
                         </p>
 
-                        <a href="/kost/detail/<?= $k['id'] ?>"
+                        <a href="/kost/detail/<?= $k['kos_id'] ?>"
                            class="btn btn-primary">
                             Detail
                         </a>
