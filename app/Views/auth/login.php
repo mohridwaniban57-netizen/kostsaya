@@ -1,5 +1,6 @@
-<?= $this->include('layout/header') ?>
-<?= $this->include('layout/navbar') ?>
+
+
+<link rel="stylesheet" href="<?= base_url('css/login.css') ?>">
 
 <section class="login-page">
 
@@ -59,5 +60,3 @@
     </div>
 
 </section>
-
-<?= $this->include('layout/footer') ?>

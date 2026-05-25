@@ -107,3 +107,8 @@ $routes->get('/admin/reject/(:num)', 'Admin::reject/$1');
 // favorit
 
 $routes->get('/favorit', 'Favorit::index');
+
+
+// beranda
+
+$routes->get('/beranda', 'beranda::index');
