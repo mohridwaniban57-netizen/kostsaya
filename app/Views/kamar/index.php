@@ -1,5 +1,5 @@
 <?= $this->include('layout/header') ?>
-<?= $this->include('layout/navbar') ?>
+
 
 <div class="container mt-4">
 
