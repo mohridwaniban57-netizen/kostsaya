@@ -51,9 +51,9 @@
                             <label for="role">Login sebagai</label>
                             <select id="role" name="role" class="form-control" required>
                                 <option value="" disabled selected hidden>Pilih peran</option>
-                                <option value="pmi">Admin</option>
-                                <option value="rumah_sakit">Pamilik kost</option>
-                                <option value="admin">Pencari kost</option>
+                                <option value="admin">Admin</option>
+                                <option value="pemilik_kost">Pamilik kost</option>
+                                <option value="pencari_kost">Pencari kost</option>
                             </select>
                 </div>
 

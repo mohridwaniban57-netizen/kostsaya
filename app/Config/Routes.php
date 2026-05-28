@@ -18,9 +18,13 @@ $routes->post('/beranda/proses2', 'beranda::proses2');
 // ======================================================
 // AUTH
 // ======================================================
-
-$routes->get('/login', 'Login::login');
+$routes->get('/login', 'Auth::login');
 $routes->post('/login', 'Auth::attempt');
+$routes->post('/login/attempt', 'Auth::attempt');
+
+// $routes->get('/login', 'Login::login');
+// $routes->post('/login', 'Auth::attempt');
+// $routes->post('/login/attempt', 'Auth::attempt');
 
 $routes->get('/register', 'Auth::register');
 $routes->post('/register', 'Auth::store');
