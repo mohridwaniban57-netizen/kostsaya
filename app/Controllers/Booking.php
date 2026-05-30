@@ -4,9 +4,18 @@ namespace App\Controllers;
 use App\Models\BookingModel;
 use App\Models\KamarModel;
 
-class Booking extends BaseController {
+class Booking extends BaseController
+{
 
-    public function index() {
+    public function index()
+    {
+        // CEK LOGIN
+        if (!session()->get('user')) {
+
+            return redirect()->to('/login')
+            ->with('error', 'Silakan login terlebih dahulu');
+        }
+
         $model = new BookingModel();
 
         return view('booking/index', [
@@ -14,7 +23,15 @@ class Booking extends BaseController {
         ]);
     }
 
-    public function store() {
+    public function store()
+    {
+        // CEK LOGIN
+        if (!session()->get('user')) {
+
+            return redirect()->to('/login')
+            ->with('error', 'Silakan login terlebih dahulu');
+        }
+
         $model = new BookingModel();
 
         $model->save([

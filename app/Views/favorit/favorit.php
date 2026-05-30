@@ -433,9 +433,13 @@ body{
                     AC, WiFi, Parkir
                 </p>
 
+                <a href="<?= base_url('detail/1'); ?>">
+
                 <button>
                     Lihat Detail
                 </button>
+
+                </a>
 
             </div>
 
@@ -475,9 +479,10 @@ body{
                     Putri, Dekat Kampus
                 </p>
 
-                <button>
-                    Lihat Detail
-                </button>
+                <a href="<?= base_url('detail/2'); ?>">
+                    <button>Lihat Detail</button>
+                </a>
+                
 
             </div>
 
@@ -517,9 +522,9 @@ body{
                     Parkir, AC
                 </p>
 
-                <button>
-                    Lihat Detail
-                </button>
+                <a href="<?= base_url('detail/3'); ?>">
+                    <button>Lihat Detail</button>
+                </a>
 
             </div>
 
@@ -559,9 +564,9 @@ body{
                     AC, WiFi
                 </p>
 
-                <button>
-                    Lihat Detail
-                </button>
+                <a href="<?= base_url('detail/4'); ?>">
+                    <button>Lihat Detail</button>
+                </a>
 
             </div>
 
@@ -601,9 +606,9 @@ body{
                     WiFi, Laundry
                 </p>
 
-                <button>
-                    Lihat Detail
-                </button>
+                <a href="<?= base_url('detail/5'); ?>">
+                    <button>Lihat Detail</button>
+                </a>
 
             </div>
 
@@ -643,9 +648,9 @@ body{
                     AC, Smart TV
                 </p>
 
-                <button>
-                    Lihat Detail
-                </button>
+                <a href="<?= base_url('detail/6'); ?>">
+                    <button>Lihat Detail</button>
+                </a>
 
             </div>
 
@@ -685,9 +690,9 @@ body{
                     WiFi, Parkir
                 </p>
 
-                <button>
-                    Lihat Detail
-                </button>
+                <a href="<?= base_url('detail/7'); ?>">
+                    <button>Lihat Detail</button>
+                </a>
 
             </div>
 
@@ -727,10 +732,9 @@ body{
                     Gym, AC, WiFi
                 </p>
 
-                <button>
-                    Lihat Detail
-                </button>
-
+                <a href="<?= base_url('detail/8'); ?>">
+                    <button>Lihat Detail</button>
+                </a>
             </div>
 
         </div>
@@ -769,9 +773,9 @@ body{
                     Putri, CCTV
                 </p>
 
-                <button>
-                    Lihat Detail
-                </button>
+                <a href="<?= base_url('detail/9'); ?>">
+                    <button>Lihat Detail</button>
+                </a>
 
             </div>
 
@@ -811,9 +815,9 @@ body{
                     AC, WiFi, Laundry
                 </p>
 
-                <button>
-                    Lihat Detail
-                </button>
+               <a href="<?= base_url('detail/10'); ?>">
+                    <button>Lihat Detail</button>
+                </a>
 
             </div>
 
