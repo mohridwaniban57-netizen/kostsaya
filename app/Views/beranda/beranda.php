@@ -1,20 +1,9 @@
-<?= $this->include('favorit/header'); ?>
+<?= $this->include('layout/header'); ?>
 
-<!-- FONT AWESOME -->
 <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
-<!-- GOOGLE FONT -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet">
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
-
-/* =========================
-   ROOT
-========================= */
 
 :root{
     --primary:#2563eb;
@@ -25,154 +14,32 @@
     --bg:#f8fafc;
 }
 
-/* =========================
-   RESET
-========================= */
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
-html{
-    scroll-behavior:smooth;
 }
 
 body{
     background:var(--bg);
     overflow-x:hidden;
-    color:var(--dark);
 }
 
-/* =========================
-   BACKGROUND
-========================= */
-
-.bg-grid{
-    position:fixed;
-    inset:0;
-
-    background-image:
-    linear-gradient(rgba(15,23,42,.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(15,23,42,.03) 1px, transparent 1px);
-
-    background-size:40px 40px;
-    z-index:-3;
-}
-
-.blur{
-    position:fixed;
-    border-radius:50%;
-    filter:blur(120px);
-    z-index:-2;
-    opacity:.25;
-}
-
-.blur-1{
-    width:400px;
-    height:400px;
-    background:var(--primary);
-
-    top:-120px;
-    left:-120px;
-
-    animation:floatY 8s infinite ease-in-out;
-}
-
-.blur-2{
-    width:450px;
-    height:450px;
-    background:var(--secondary);
-
-    bottom:-150px;
-    right:-150px;
-
-    animation:floatX 10s infinite ease-in-out;
-}
-
-/* =========================
-   SEARCH BAR
-========================= */
-
-.search-navbar{
-    width:100%;
-    padding:30px 80px 0;
-    position:relative;
-    z-index:10;
-}
-
-.search-trigger{
-    width:100%;
-    max-width:850px;
-
+.beranda{
+    max-width:1400px;
     margin:auto;
-
-    height:70px;
-
-    border:none;
-    border-radius:22px;
-
-    background:rgba(255,255,255,.9);
-    backdrop-filter:blur(20px);
-
-    display:flex;
-    align-items:center;
-    gap:15px;
-
-    padding:0 28px;
-
-    font-size:17px;
-    color:var(--text);
-
-    cursor:pointer;
-
-    box-shadow:
-    0 15px 45px rgba(0,0,0,.06);
-
-    transition:.3s;
+    padding:40px;
 }
 
-.search-trigger:hover{
-    transform:translateY(-3px);
-}
-
-.search-trigger i{
-    color:var(--primary);
-    font-size:20px;
-}
-
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero{
-    min-height:100vh;
-
-    display:flex;
-    align-items:center;
-
-    padding:80px 80px 120px;
-}
-
-.hero-wrapper{
-    width:100%;
-    max-width:1400px;
-
-    margin:auto;
-
     display:grid;
-    grid-template-columns:1fr 1fr;
-
-    gap:80px;
+    grid-template-columns:1.1fr 1fr;
+    gap:60px;
     align-items:center;
-}
 
-/* HERO LEFT */
-
-.hero-text{
-    animation:fadeLeft 1s ease;
+    min-height:75vh;
 }
 
 .hero-badge{
@@ -180,339 +47,283 @@ body{
     align-items:center;
     gap:10px;
 
-    padding:14px 22px;
+    padding:12px 20px;
 
     border-radius:50px;
 
-    background:rgba(255,255,255,.8);
-    backdrop-filter:blur(20px);
-
-    box-shadow:0 10px 30px rgba(0,0,0,.05);
-
+    background:#dbeafe;
     color:var(--primary);
+
     font-weight:600;
-
-    margin-bottom:30px;
-}
-
-.hero-text h1{
-    font-size:72px;
-    line-height:1.1;
-
-    font-weight:800;
 
     margin-bottom:25px;
 }
 
-.hero-text h1 span{
-    background:linear-gradient(
-        135deg,
-        var(--primary),
-        var(--secondary)
-    );
-
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+.hero h1{
+    font-size:70px;
+    line-height:1.1;
+    font-weight:800;
+    color:var(--dark);
 }
 
-.hero-text p{
+.hero h1 span{
+    color:var(--primary);
+}
+
+.hero p{
+    margin-top:25px;
     font-size:18px;
     line-height:1.9;
-
     color:var(--text);
-
-    margin-bottom:40px;
-    max-width:650px;
 }
-
-/* BUTTON */
 
 .hero-btns{
     display:flex;
-    gap:20px;
-    flex-wrap:wrap;
+    gap:15px;
+    margin-top:40px;
 }
 
-.btn-primary,
-.btn-outline{
-    padding:18px 34px;
-
-    border-radius:18px;
-
-    text-decoration:none;
-    font-weight:600;
-
-    transition:.4s;
-}
-
-.btn-primary{
-    background:linear-gradient(
-        135deg,
-        var(--primary),
-        var(--secondary)
-    );
-
+.btn-main{
+    background:var(--primary);
     color:white;
-
-    box-shadow:
-    0 15px 35px rgba(37,99,235,.25);
+    text-decoration:none;
+    padding:18px 32px;
+    border-radius:16px;
+    font-weight:600;
 }
 
-.btn-primary:hover{
-    transform:translateY(-6px);
-}
-
-.btn-outline{
+.btn-second{
     background:white;
     color:var(--dark);
-
-    border:1px solid rgba(0,0,0,.05);
-
-    box-shadow:0 10px 25px rgba(0,0,0,.05);
+    text-decoration:none;
+    padding:18px 32px;
+    border-radius:16px;
+    font-weight:600;
+    border:1px solid #e2e8f0;
 }
-
-.btn-outline:hover{
-    transform:translateY(-6px);
-}
-
-/* HERO RIGHT */
 
 .hero-image{
     position:relative;
-    animation:fadeUp 1s ease;
 }
 
 .hero-image img{
     width:100%;
-    height:650px;
-
+    height:600px;
     object-fit:cover;
-
-    border-radius:40px;
-
-    box-shadow:
-    0 30px 80px rgba(0,0,0,.15);
+    border-radius:35px;
 }
 
-/* FLOAT CARD */
-
-.float-card{
+.floating-card{
     position:absolute;
-
-    left:-50px;
+    left:-30px;
     bottom:40px;
 
-    width:320px;
-
-    background:rgba(255,255,255,.9);
-    backdrop-filter:blur(20px);
-
-    border-radius:30px;
-
-    padding:30px;
+    background:white;
+    padding:25px 30px;
+    border-radius:20px;
 
     box-shadow:
-    0 25px 60px rgba(0,0,0,.12);
-
-    animation:floating 4s infinite ease-in-out;
+    0 15px 40px rgba(0,0,0,.08);
 }
 
-.float-card h3{
-    font-size:28px;
-    margin-bottom:12px;
-}
-
-.float-card p{
-    color:var(--text);
-    line-height:1.8;
-
-    margin-bottom:25px;
-}
-
-.float-stats{
-    display:flex;
-    justify-content:space-between;
-}
-
-.float-stats h4{
-    font-size:24px;
+.floating-card h3{
     color:var(--primary);
+    font-size:34px;
 }
 
-.float-stats span{
-    font-size:13px;
+.floating-card span{
     color:var(--text);
 }
 
-/* =========================
-   SECTION
-========================= */
+/* STATS */
 
-.section{
-    padding:120px 80px;
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+
+    margin-top:80px;
 }
+
+.stat-card{
+    background:white;
+    padding:35px;
+    border-radius:24px;
+    text-align:center;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.05);
+}
+
+.stat-card h2{
+    color:var(--primary);
+    font-size:38px;
+}
+
+.stat-card p{
+    color:var(--text);
+}
+
+/* TITLE */
 
 .section-title{
     text-align:center;
-    margin-bottom:70px;
+    margin-bottom:50px;
 }
 
 .section-title h2{
-    font-size:52px;
-    margin-bottom:15px;
+    font-size:50px;
+    color:var(--dark);
 }
 
 .section-title p{
+    margin-top:10px;
     color:var(--text);
-    font-size:18px;
 }
 
-/* =========================
-   FEATURE
-========================= */
+/* CATEGORY */
 
-.feature-grid{
+.category-section{
+    padding:120px 0 80px;
+}
+
+.category-grid{
     display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(280px,1fr));
-
-    gap:30px;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
 }
 
-.feature{
-    background:rgba(255,255,255,.8);
-    backdrop-filter:blur(20px);
+.category-card{
+    background:white;
+    padding:35px;
+    border-radius:25px;
+    text-align:center;
 
-    border-radius:35px;
-
-    padding:45px 35px;
-
-    transition:.4s;
-
-    border:1px solid rgba(255,255,255,.4);
+    transition:.3s;
 
     box-shadow:
-    0 20px 50px rgba(0,0,0,.05);
+    0 15px 35px rgba(0,0,0,.05);
 }
 
-.feature:hover{
+.category-card:hover{
     transform:translateY(-10px);
 }
 
-.feature-icon{
-    width:90px;
-    height:90px;
-
-    border-radius:28px;
-
-    background:linear-gradient(
-        135deg,
-        rgba(37,99,235,.15),
-        rgba(124,58,237,.15)
-    );
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-size:34px;
-
+.category-card i{
+    font-size:42px;
     color:var(--primary);
-
-    margin-bottom:25px;
-}
-
-.feature h3{
-    font-size:28px;
     margin-bottom:15px;
 }
 
-.feature p{
-    color:var(--text);
-    line-height:1.9;
+.category-card h3{
+    font-size:22px;
 }
 
-/* =========================
-   KOST CARD
-========================= */
+/* KOST */
+.badge-populer{
+    position:absolute;
+    top:15px;
+    left:15px;
+
+    background:#2563eb;
+    color:white;
+
+    padding:6px 12px;
+    border-radius:10px;
+
+    font-size:12px;
+    font-weight:600;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.1);
+}
+
+.kost-section{
+    padding:100px 0;
+}
 
 .kost-grid{
     display:grid;
-
     grid-template-columns:
-    repeat(auto-fit,minmax(320px,1fr));
+    repeat(4,1fr);
 
-    gap:35px;
+    gap:20px;
 }
 
 .kost-card{
     background:white;
-
-    border-radius:35px;
+    border-radius:20px;
     overflow:hidden;
 
-    transition:.5s;
+    transition:.3s;
 
     box-shadow:
-    0 15px 45px rgba(0,0,0,.06);
+    0 10px 25px rgba(225, 255, 0, 0.05);
 }
 
 .kost-card:hover{
-    transform:translateY(-12px);
+    transform:translateY(-10px);
 }
 
 .kost-image{
-    overflow:hidden;
+    position:relative;
 }
 
 .kost-image img{
     width:100%;
-    height:260px;
-
+    height:180px;
     object-fit:cover;
-
-    transition:.6s;
 }
 
-.kost-card:hover img{
-    transform:scale(1.08);
+.badge-premium{
+    position:absolute;
+    top:15px;
+    left:15px;
+
+    background:#f59e0b;
+    color:white;
+
+    padding:8px 14px;
+
+    border-radius:10px;
+
+    font-size:12px;
+    font-weight:600;
+}
+
+.rating i{
+    color: #f59e0b;
+    margin-right:2px;
 }
 
 .kost-content{
-    padding:30px;
+    padding:25px;
 }
 
 .kost-content h3{
-    font-size:28px;
+    font-size:25px;
     margin-bottom:10px;
 }
 
 .kost-content p{
     color:var(--text);
     line-height:1.8;
-
-    margin-bottom:20px;
 }
 
-.tags{
+.kost-tags{
     display:flex;
     gap:10px;
     flex-wrap:wrap;
 
-    margin-bottom:25px;
+    margin:20px 0;
 }
 
-.tags span{
-    padding:10px 15px;
-
-    border-radius:14px;
-
+.kost-tags span{
     background:#eff6ff;
     color:var(--primary);
 
+    padding:8px 12px;
+    border-radius:10px;
     font-size:13px;
-    font-weight:600;
 }
 
 .kost-footer{
@@ -522,233 +333,226 @@ body{
 }
 
 .price{
-    font-size:26px;
+    font-size:24px;
     font-weight:700;
 }
 
 .detail-btn{
     border:none;
-
-    background:var(--dark);
+    background:var(--primary);
     color:white;
 
-    padding:14px 24px;
-
-    border-radius:15px;
+    padding:12px 20px;
+    border-radius:12px;
 
     cursor:pointer;
-
-    transition:.4s;
+    font-weight:600;
 }
 
-.detail-btn:hover{
-    background:var(--primary);
+/* FEATURE */
+
+.feature-section{
+    padding:80px 0;
 }
 
-/* =========================
-   CTA
-========================= */
+.feature-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+}
+
+.feature-card{
+    background:white;
+    padding:40px;
+    border-radius:25px;
+    text-align:center;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.05);
+}
+
+.feature-card i{
+    font-size:42px;
+    color:var(--primary);
+    margin-bottom:20px;
+}
+
+.feature-card h3{
+    margin-bottom:10px;
+}
+
+.feature-card p{
+    color:var(--text);
+    line-height:1.8;
+}
+
+/* TESTIMONI */
+
+.testimoni-section{
+    padding:100px 0;
+}
+
+.testimoni-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+    gap:25px;
+}
+
+.testimoni-card{
+    background:white;
+    padding:35px;
+    border-radius:25px;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.05);
+}
+
+.testimoni-card i{
+    color:#f59e0b;
+    margin-bottom:15px;
+}
+
+.testimoni-card p{
+    color:var(--text);
+    line-height:1.8;
+}
+
+.testimoni-card h4{
+    margin-top:20px;
+}
+
+/* CTA */
 
 .cta{
-    background:linear-gradient(
+    margin-top:50px;
+
+    background:
+    linear-gradient(
         135deg,
         var(--primary),
         var(--secondary)
     );
 
-    padding:90px 50px;
-
-    border-radius:45px;
+    border-radius:35px;
 
     text-align:center;
-    color:white;
 
-    box-shadow:
-    0 30px 80px rgba(37,99,235,.25);
+    padding:90px 50px;
+
+    color:white;
 }
 
 .cta h2{
-    font-size:58px;
+    font-size:55px;
     margin-bottom:20px;
 }
 
 .cta p{
     max-width:700px;
-
     margin:auto;
-    margin-bottom:40px;
-
     line-height:1.9;
-
-    color:#e2e8f0;
 }
 
-/* =========================
-   ANIMATION
-========================= */
+.cta a{
+    display:inline-block;
 
-@keyframes fadeLeft{
-    from{
-        opacity:0;
-        transform:translateX(-60px);
-    }
+    margin-top:35px;
 
-    to{
-        opacity:1;
-        transform:translateX(0);
-    }
+    background:white;
+    color:var(--primary);
+
+    text-decoration:none;
+
+    padding:18px 35px;
+
+    border-radius:16px;
+
+    font-weight:700;
 }
 
-@keyframes fadeUp{
-    from{
-        opacity:0;
-        transform:translateY(60px);
-    }
+/* RESPONSIVE */
 
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
+@media(max-width:900px){
 
-@keyframes floating{
-    0%{
-        transform:translateY(0px);
-    }
-
-    50%{
-        transform:translateY(-12px);
-    }
-
-    100%{
-        transform:translateY(0px);
-    }
-}
-
-@keyframes floatY{
-    0%{
-        transform:translateY(0);
-    }
-
-    50%{
-        transform:translateY(40px);
-    }
-
-    100%{
-        transform:translateY(0);
-    }
-}
-
-@keyframes floatX{
-    0%{
-        transform:translateX(0);
-    }
-
-    50%{
-        transform:translateX(-40px);
-    }
-
-    100%{
-        transform:translateX(0);
-    }
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media(max-width:1100px){
-
-    .hero-wrapper{
+    .hero{
         grid-template-columns:1fr;
     }
 
-    .hero-text h1{
-        font-size:54px;
+    .hero h1{
+        font-size:48px;
     }
+
+    .stats{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .floating-card{
+        left:15px;
+    }
+
 }
 
-@media(max-width:768px){
+@media(max-width:600px){
 
-    .hero,
-    .section{
-        padding:90px 25px;
+    .beranda{
+        padding:20px;
     }
 
-    .search-navbar{
-        padding:20px 20px 0;
-    }
-
-    .hero-text h1{
-        font-size:42px;
-    }
-
-    .section-title h2{
+    .hero h1{
         font-size:38px;
     }
 
-    .float-card{
-        position:relative;
-
-        width:100%;
-
-        left:0;
-        bottom:0;
-
-        margin-top:20px;
+    .stats{
+        grid-template-columns:1fr;
     }
+
+    .hero-btns{
+        flex-direction:column;
+    }
+
+    .cta h2{
+        font-size:35px;
+    }
+
 }
 
 </style>
 
-<!-- BACKGROUND -->
+<div class="beranda">
 
-<div class="bg-grid"></div>
+    <!-- HERO -->
 
-<div class="blur blur-1"></div>
-<div class="blur blur-2"></div>
+    <section class="hero">
 
-<!-- SEARCH BAR -->
-
-
-<!-- HERO -->
-
-<section class="hero">
-
-    <div class="hero-wrapper">
-
-        <!-- HERO LEFT -->
-
-        <div class="hero-text">
+        <div>
 
             <div class="hero-badge">
-
                 <i class="fa-solid fa-location-dot"></i>
-
-                Platform Kost Modern Indonesia
-
+                Platform Kost Sekitaran Palu
             </div>
 
             <h1>
-                Temukan Hunian
-                <span>Modern</span>
-                dan Nyaman
-                Untuk Hidup Lebih Produktif
+                Temukan Kost
+                <span>Nyaman</span>
+                dan Strategis
             </h1>
 
             <p>
-                Kost premium dengan fasilitas lengkap,
-                desain elegan, dan lokasi strategis
-                untuk mahasiswa maupun pekerja modern.
+                Ribuan pilihan kost berkualitas dengan fasilitas lengkap,
+                lokasi strategis, harga terjangkau, dan proses booking yang mudah.
             </p>
 
             <div class="hero-btns">
 
-                <a href="#" class="btn-primary">
-                    Cari Kost
+                <a href="/kost" class="btn-main">
+                    Jelajahi Kost
                 </a>
 
-                <a href="favorit" class="btn-outline">
+                <a href="/favorit" class="btn-second">
                     Lihat Favorit
                 </a>
 
@@ -756,199 +560,285 @@ body{
 
         </div>
 
-        <!-- HERO RIGHT -->
-
         <div class="hero-image">
 
-            <img src="<?= base_url('img/orange.jpg'); ?>" alt="Kost Modern">
+            <img src="<?= base_url('img/orange.jpg'); ?>">
 
-            <div class="float-card">
+            <div class="floating-card">
 
-                <h3>Kost Elite Residence</h3>
+                <h3>1500+</h3>
 
-                <p>
-                    Hunian eksklusif dengan suasana nyaman,
-                    aman, dan modern.
-                </p>
+                <span>Kost Terverifikasi</span>
 
-                <div class="float-stats">
+            </div>
 
-                    <div>
-                        <h4>500+</h4>
-                        <span>Kost</span>
+        </div>
+
+    </section>
+
+    <!-- STATS -->
+
+    <section class="stats">
+
+        <div class="stat-card">
+            <h2>1500+</h2>
+            <p>Kost Terdaftar</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>10000+</h2>
+            <p>Pengguna Aktif</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>4.9</h2>
+            <p>Rating</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>24/7</h2>
+            <p>Siap Melayani</p>
+        </div>
+
+    </section>
+
+    <!-- KATEGORI -->
+
+    <section class="category-section">
+
+        <div class="section-title">
+
+            <h2>Kategori Kost</h2>
+
+            <p>Pilih sesuai kebutuhanmu</p>
+
+        </div>
+
+        <div class="category-grid">
+
+            <div class="category-card">
+                <i class="fa-solid fa-person"></i>
+                <h3>Kost Putra</h3>
+            </div>
+
+            <div class="category-card">
+                <i class="fa-solid fa-person-dress"></i>
+                <h3>Kost Putri</h3>
+            </div>
+
+            <div class="category-card">
+                <i class="fa-solid fa-people-group"></i>
+                <h3>Kost Campur</h3>
+            </div>
+
+        
+        </div>
+
+    </section>
+
+    <!-- KOST -->
+
+    <section class="kost-section">
+
+        <div class="section-title">
+
+            <h2>Kost Populer</h2>
+
+            <p>Rekomendasi pilihan terbaik</p>
+
+        </div>
+
+        <div class="kost-grid">
+
+            <?php for($i=1;$i<=8;$i++): ?>
+
+            <div class="kost-card">
+
+                <div class="kost-image">
+
+                    <div class="badge-populer">
+                        Populer
                     </div>
 
-                    <div>
-                        <h4>4.9</h4>
-                        <span>Rating</span>
+                    <img src="<?= base_url('img/orange.jpg'); ?>">
+
+                </div>
+
+                <div class="kost-content">
+
+                    <h3>Kost Palu <?= $i ?></h3>
+
+                    <div class="location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Tondo, Kota Palu
                     </div>
 
-                    <div>
-                        <h4>24H</h4>
-                        <span>Support</span>
+                    <div class="kost-tags">
+
+                        <span>WiFi</span>
+                        <span>AC</span>
+                        <span>Parkir</span>
+
+                    </div>
+
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        4.9
+                    </div>
+
+                    <div class="kost-footer">
+
+                        <div class="price">
+                            Rp850.000
+                            <small style="
+                                display:block;
+                                font-size:11px;
+                                color:#64748b;
+                                font-weight:500;
+                            ">
+                                /bulan
+                            </small>
+                        </div>
+
+                        <button class="detail-btn">
+                            Detail
+                        </button>
+
                     </div>
 
                 </div>
 
             </div>
 
+            <?php endfor; ?>
+
         </div>
 
-    </div>
+    </section>
 
-</section>
+    <!-- FITUR -->
 
-<!-- FEATURE -->
+    <section class="feature-section">
 
-<section class="section">
+        <div class="section-title">
 
-    <div class="section-title">
+            <h2>Kenapa Memilih Kami?</h2>
 
-        <h2>Kenapa Memilih Kami?</h2>
+            <p>Lebih mudah, cepat dan terpercaya</p>
 
-        <p>
-            Pengalaman mencari kost yang lebih modern dan profesional.
-        </p>
+        </div>
 
-    </div>
+        <div class="feature-grid">
 
-    <div class="feature-grid">
+            <div class="feature-card">
 
-        <!-- FEATURE 1 -->
+                <i class="fa-solid fa-shield-halved"></i>
 
-        <div class="feature">
+                <h3>Aman</h3>
 
-            <div class="feature-icon">
-                <i class="fa-solid fa-shield-heart"></i>
+                <p>
+                    Semua kost telah melalui proses verifikasi.
+                </p>
+
             </div>
 
-            <h3>Keamanan Premium</h3>
+            <div class="feature-card">
 
-            <p>
-                CCTV, akses aman, dan lingkungan nyaman
-                untuk kehidupan sehari-hari.
-            </p>
-
-        </div>
-
-        <!-- FEATURE 2 -->
-
-        <div class="feature">
-
-            <div class="feature-icon">
-                <i class="fa-solid fa-wifi"></i>
-            </div>
-
-            <h3>Fasilitas Lengkap</h3>
-
-            <p>
-                WiFi cepat, AC, laundry, parkir,
-                dan fasilitas modern lainnya.
-            </p>
-
-        </div>
-
-        <!-- FEATURE 3 -->
-
-        <div class="feature">
-
-            <div class="feature-icon">
                 <i class="fa-solid fa-location-dot"></i>
-            </div>
 
-            <h3>Lokasi Strategis</h3>
-
-            <p>
-                Dekat kampus, kantor,
-                pusat kuliner, dan transportasi.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- POPULAR -->
-
-<section class="section">
-
-    <div class="section-title">
-
-        <h2>Kost Populer</h2>
-
-        <p>
-            Pilihan kost favorit dengan desain modern.
-        </p>
-
-    </div>
-
-    <div class="kost-grid">
-
-        <div class="kost-card">
-
-            <div class="kost-image">
-
-                <img src="<?= base_url('img/orange.jpg'); ?>"
-                     alt="Kost Menteng">
-
-            </div>
-
-            <div class="kost-content">
-
-                <h3>Kost Menteng</h3>
+                <h3>Strategis</h3>
 
                 <p>
-                    Hunian nyaman dengan fasilitas premium.
+                    Dekat kampus, kantor dan pusat aktivitas.
                 </p>
 
-                <div class="tags">
+            </div>
 
-                    <span>WiFi</span>
-                    <span>AC</span>
-                    <span>Parkir</span>
+            <div class="feature-card">
 
-                </div>
+                <i class="fa-solid fa-bolt"></i>
 
-                <div class="kost-footer">
+                <h3>Cepat</h3>
 
-                    <div class="price">
-                        Rp 2.5jt
-                    </div>
-
-                    <button class="detail-btn">
-                        Detail
-                    </button>
-
-                </div>
+                <p>
+                    Booking kost hanya dalam beberapa menit.
+                </p>
 
             </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
+    <!-- TESTIMONI -->
 
-<!-- CTA -->
+    <section class="testimoni-section">
 
-<section class="section">
+        <div class="section-title">
 
-    <div class="cta">
+            <h2>Testimoni Pengguna</h2>
 
-        <h2>Mulai Cari Kost Impianmu</h2>
+            <p>Apa kata mereka?</p>
 
-        <p>
-            Temukan tempat tinggal modern,
-            nyaman, dan elegan untuk hidup lebih produktif.
-        </p>
+        </div>
 
-        <a href="#" class="btn-outline">
-            Mulai Sekarang
-        </a>
+        <div class="testimoni-grid">
 
-    </div>
+            <div class="testimoni-card">
 
-</section>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
 
-<?= $this->include('beranda/footer'); ?>
+                <p>
+                    Sangat membantu menemukan kost dekat kampus
+                    dengan harga yang sesuai.
+                </p>
+
+                <h4>Arya Saputra</h4>
+
+            </div>
+
+            <div class="testimoni-card">
+
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+
+                <p>
+                    Tampilan website modern dan mudah digunakan.
+                </p>
+
+                <h4>Hendra al</h4>
+
+            </div>
+
+            <div class="testimoni-card">
+
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+
+                <p>
+                    Booking cepat dan banyak pilihan kost.
+                </p>
+
+                <h4>Budi Santoso</h4>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</div>
+
+<?= $this->include('layout/footer'); ?>

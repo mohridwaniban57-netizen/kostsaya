@@ -115,4 +115,6 @@ $routes->get('/admin/reject/(:num)', 'Admin::reject/$1');
 
 $routes->get('/favorit', 'Favorit::index');
 
-# BERANDA
+# Jelajahi
+
+$routes->get('/jelajahi', 'Jelajahi::index');
