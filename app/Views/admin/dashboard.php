@@ -53,4 +53,4 @@
 
 </div>
 
-<?= $this->include('layout/footer') ?>
+<?= $this->include('home/footer') ?>

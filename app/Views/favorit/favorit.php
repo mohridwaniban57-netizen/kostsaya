@@ -1,11 +1,14 @@
-<!-- favorit/favorit.php -->
-
-<?= $this->include('favorit/header'); ?>
-
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
 <style>
+
+:root{
+    --primary:#2563eb;
+    --dark:#0f172a;
+    --text:#64748b;
+    --bg:#f8fafc;
+}
 
 *{
     margin:0;
@@ -15,11 +18,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 }
 
 body{
-
-    background:
-    linear-gradient(to bottom,#f8fbff,#eef4ff);
-
-    color:#0f172a;
+    background:var(--bg);
 }
 
 /* =========================
@@ -27,36 +26,28 @@ body{
 ========================= */
 
 .favorite-section{
-
-    padding:50px 60px;
+    max-width:1400px;
+    margin:auto;
+    padding:30px;
 }
 
 /* =========================
-   TOP TITLE
+   HEADER
 ========================= */
 
 .top-title{
-
-    margin-bottom:35px;
+    margin-bottom:25px;
 }
 
 .top-title h1{
-
-    font-size:46px;
+    font-size:38px;
+    color:var(--dark);
     font-weight:800;
-
-    color:#0f172a;
-
-    margin-bottom:12px;
-
-    letter-spacing:-1px;
 }
 
 .top-title p{
-
-    color:#64748b;
-
-    font-size:16px;
+    color:var(--text);
+    margin-top:8px;
 }
 
 /* =========================
@@ -64,57 +55,34 @@ body{
 ========================= */
 
 .filter-box{
-
     display:flex;
     justify-content:flex-end;
-
-    margin-bottom:35px;
+    margin-bottom:25px;
 }
 
 .filter-box select{
+    width:220px;
+    height:45px;
 
-    height:52px;
+    border:1px solid #e2e8f0;
+    border-radius:10px;
 
-    padding:0 18px;
-
-    border-radius:16px;
-
-    border:1px solid #dbe3ef;
+    padding:0 12px;
 
     background:white;
-
-    cursor:pointer;
-
-    font-size:15px;
-    font-weight:500;
-
-    color:#0f172a;
-
-    outline:none;
-
-    transition:.3s;
-
-    box-shadow:
-    0 8px 25px rgba(37,99,235,.06);
-}
-
-.filter-box select:hover{
-
-    border-color:#2563eb;
 }
 
 /* =========================
-   CARD CONTAINER
+   GRID
 ========================= */
 
 .card-container{
-
     display:grid;
 
     grid-template-columns:
-    repeat(auto-fit,minmax(270px,1fr));
+    repeat(4,1fr);
 
-    gap:22px;
+    gap:20px;
 }
 
 /* =========================
@@ -122,32 +90,20 @@ body{
 ========================= */
 
 .card{
+    background:white;
 
-    background:rgba(255,255,255,.85);
-
-    backdrop-filter:blur(10px);
-
-    border-radius:24px;
+    border-radius:20px;
 
     overflow:hidden;
 
-    border:1px solid rgba(255,255,255,.5);
-
-    transition:.35s;
-
-    position:relative;
+    transition:.3s;
 
     box-shadow:
-    0 10px 28px rgba(15,23,42,.06);
+    0 10px 25px rgba(0,0,0,.05);
 }
 
 .card:hover{
-
-    transform:
-    translateY(-8px);
-
-    box-shadow:
-    0 20px 45px rgba(37,99,235,.15);
+    transform:translateY(-5px);
 }
 
 /* =========================
@@ -155,203 +111,144 @@ body{
 ========================= */
 
 .card-image{
-
     position:relative;
-
-    overflow:hidden;
 }
 
 .card-image img{
-
     width:100%;
-    height:190px;
-
+    height:180px;
     object-fit:cover;
-
-    transition:.5s;
 }
 
-.card:hover .card-image img{
 
-    transform:scale(1.07);
-}
-
-/* =========================
-   FAVORITE ICON
-========================= */
+/* FAVORITE */
 
 .favorite-icon{
-
     position:absolute;
 
-    top:16px;
-    right:16px;
+    top:12px;
+    right:12px;
 
-    width:46px;
-    height:46px;
+    width:35px;
+    height:35px;
 
     border-radius:50%;
 
-    background:rgba(255,255,255,.9);
-
-    backdrop-filter:blur(10px);
+    background:white;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    color:#ef4444;
-
-    font-size:18px;
-
-    cursor:pointer;
-
-    transition:.3s;
-
     box-shadow:
-    0 10px 25px rgba(0,0,0,.12);
+    0 5px 15px rgba(0,0,0,.1);
 }
 
-.favorite-icon:hover{
-
-    transform:scale(1.08);
-
-    background:#ef4444;
-
-    color:white;
+.favorite-icon i{
+    color:#ef4444;
 }
 
 /* =========================
-   CARD CONTENT
+   CONTENT
 ========================= */
 
 .card-content{
-
-    padding:20px;
+    padding:18px;
 }
 
 .card-content h3{
-
-    font-size:20px;
-    font-weight:700;
-
-    color:#0f172a;
-
-    margin-bottom:6px;
+    font-size:18px;
+    margin-bottom:8px;
 }
 
-.card-content p{
+.location{
+    color:var(--text);
+    font-size:13px;
 
-    color:#64748b;
-
-    font-size:14px;
+    margin-bottom:12px;
 }
 
-/* =========================
-   PRICE RATING
-========================= */
+.facility{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
 
-.price-rating{
+    margin-bottom:12px;
+}
 
-    margin:16px 0;
+.facility span{
+    background:#f1f5f9;
 
+    padding:6px 10px;
+
+    border-radius:8px;
+
+    font-size:11px;
+}
+
+.rating{
+    color:#f59e0b;
+    font-size:13px;
+
+    margin-bottom:15px;
+}
+
+.card-footer{
     display:flex;
     justify-content:space-between;
     align-items:center;
 }
 
-.price-rating span{
-
-    font-size:16px;
+.price{
+    font-size:18px;
     font-weight:700;
-
-    color:#2563eb;
 }
 
-.stars{
-
-    color:#facc15;
-
-    font-size:14px;
-
-    letter-spacing:2px;
+.price small{
+    display:block;
+    font-size:11px;
+    color:#64748b;
+    font-weight:500;
 }
 
-/* =========================
-   FACILITY
-========================= */
-
-.facility{
-
-    margin-bottom:20px;
-
-    line-height:1.6;
-}
-
-/* =========================
-   BUTTON
-========================= */
-
-.card-content button{
-
-    width:100%;
-    height:48px;
-
-    border:none;
-
-    border-radius:15px;
-
-    background:
-    linear-gradient(
-    135deg,
-    #2563eb,
-    #1d4ed8
-    );
-
+.btn-detail{
+    background:var(--primary);
     color:white;
 
-    font-size:15px;
-    font-weight:700;
+    text-decoration:none;
 
-    cursor:pointer;
+    padding:8px 14px;
 
-    transition:.35s;
+    border-radius:10px;
 
-    box-shadow:
-    0 10px 25px rgba(37,99,235,.25);
+    font-size:13px;
 }
 
-.card-content button:hover{
+@media(max-width:1200px){
 
-    transform:translateY(-3px);
+    .card-container{
+        grid-template-columns:
+        repeat(3,1fr);
+    }
 
-    box-shadow:
-    0 16px 35px rgba(37,99,235,.35);
 }
-
-/* =========================
-   RESPONSIVE
-========================= */
 
 @media(max-width:768px){
 
-    .favorite-section{
-
-        padding:30px 20px;
-    }
-
-    .top-title h1{
-
-        font-size:34px;
+    .card-container{
+        grid-template-columns:
+        repeat(2,1fr);
     }
 
     .filter-box{
-
         justify-content:flex-start;
     }
 
-    .card-container{
+}
 
+@media(max-width:500px){
+
+    .card-container{
         grid-template-columns:1fr;
     }
 
@@ -361,469 +258,245 @@ body{
 
 <section class="favorite-section">
 
-    <div class="top-title">
+<div class="top-title">
 
-        <h1>
-            Kost Favorit Anda
-        </h1>
+    <h1>Kost Favorit</h1>
 
-        <p>
-            Koleksi kost impian yang telah Anda simpan.
-        </p>
+    <p>
+        Koleksi kost yang telah Anda simpan.
+    </p>
+
+</div>
+
+<div class="filter-box">
+
+    <select id="sortFilter">
+
+        <option value="terbaru">
+            Urutkan : Terbaru
+        </option>
+
+        <option value="termurah">
+            Harga Terendah
+        </option>
+
+        <option value="termahal">
+            Harga Tertinggi
+        </option>
+
+    </select>
+
+</div>
+
+<div class="card-container">
+
+<!-- CARD 1 -->
+
+<div class="card" data-price="2500000" data-date="1">
+
+    <div class="card-image">
+
+        <div class="favorite-icon">
+            <i class="fa-solid fa-heart"></i>
+        </div>
+
+        <img src="<?= base_url('img/orange.jpg'); ?>">
 
     </div>
 
-    <!-- FILTER -->
+    <div class="card-content">
 
-    <div class="filter-box">
+        <h3>Kost Menteng Residence</h3>
 
-        <select id="sortFilter">
+        <div class="location">
+            <i class="fa-solid fa-location-dot"></i>
+            Jakarta Pusat
+        </div>
 
-            <option value="terbaru">
-                Urutkan: Terbaru
-            </option>
+        <div class="facility">
 
-            <option value="termurah">
-                Harga Terendah
-            </option>
-
-            <option value="termahal">
-                Harga Tertinggi
-            </option>
-
-        </select>
-
-    </div>
-
-    <!-- CARD CONTAINER -->
-
-    <div class="card-container">
-
-        <!-- CARD 1 -->
-
-        <div class="card" data-price="2500000" data-date="1">
-
-            <div class="card-image">
-
-                <img src="<?= base_url('img/orange.jpg'); ?>">
-
-                <div class="favorite-icon">
-                    <i class="fa-solid fa-heart"></i>
-                </div>
-
-            </div>
-
-            <div class="card-content">
-
-                <h3>Kost Menteng Residence</h3>
-
-                <p>Jakarta Pusat</p>
-
-                <div class="price-rating">
-
-                    <span>Rp 2.500.000 / bln</span>
-
-                    <div class="stars">
-                        ★★★★★
-                    </div>
-
-                </div>
-
-                <p class="facility">
-                    AC, WiFi, Parkir
-                </p>
-
-                <a href="<?= base_url('detail/1'); ?>">
-
-                <button>
-                    Lihat Detail
-                </button>
-
-                </a>
-
-            </div>
+            <span>WiFi</span>
+            <span>AC</span>
+            <span>Parkir</span>
 
         </div>
 
-        <!-- CARD 2 -->
-
-        <div class="card" data-price="1150000" data-date="2">
-
-            <div class="card-image">
-
-                <img src="<?= base_url('img/orange.jpg'); ?>">
-
-                <div class="favorite-icon">
-                    <i class="fa-solid fa-heart"></i>
-                </div>
-
-            </div>
-
-            <div class="card-content">
-
-                <h3>Wisma Asri Baru</h3>
-
-                <p>Surabaya Selatan</p>
-
-                <div class="price-rating">
-
-                    <span>Rp 1.150.000 / bln</span>
-
-                    <div class="stars">
-                        ★★★★★
-                    </div>
-
-                </div>
-
-                <p class="facility">
-                    Putri, Dekat Kampus
-                </p>
-
-                <a href="<?= base_url('detail/2'); ?>">
-                    <button>Lihat Detail</button>
-                </a>
-                
-
-            </div>
-
+        <div class="rating">
+            ★★★★★ 4.9
         </div>
 
-        <!-- CARD 3 -->
+        <div class="card-footer">
 
-        <div class="card" data-price="3200000" data-date="3">
-
-            <div class="card-image">
-
-                <img src="<?= base_url('img/orange.jpg'); ?>">
-
-                <div class="favorite-icon">
-                    <i class="fa-solid fa-heart"></i>
-                </div>
-
+            <div class="price">
+                Rp 2.500.000
+                <small>/bulan</small>
             </div>
 
-            <div class="card-content">
-
-                <h3>Wisma Pusat</h3>
-
-                <p>Bandung</p>
-
-                <div class="price-rating">
-
-                    <span>Rp 3.200.000 / bln</span>
-
-                    <div class="stars">
-                        ★★★★★
-                    </div>
-
-                </div>
-
-                <p class="facility">
-                    Parkir, AC
-                </p>
-
-                <a href="<?= base_url('detail/3'); ?>">
-                    <button>Lihat Detail</button>
-                </a>
-
-            </div>
-
-        </div>
-
-        <!-- CARD 4 -->
-
-        <div class="card" data-price="1800000" data-date="4">
-
-            <div class="card-image">
-
-                <img src="<?= base_url('img/orange.jpg'); ?>">
-
-                <div class="favorite-icon">
-                    <i class="fa-solid fa-heart"></i>
-                </div>
-
-            </div>
-
-            <div class="card-content">
-
-                <h3>Kost Mawar Indah</h3>
-
-                <p>Malang</p>
-
-                <div class="price-rating">
-
-                    <span>Rp 1.800.000 / bln</span>
-
-                    <div class="stars">
-                        ★★★★★
-                    </div>
-
-                </div>
-
-                <p class="facility">
-                    AC, WiFi
-                </p>
-
-                <a href="<?= base_url('detail/4'); ?>">
-                    <button>Lihat Detail</button>
-                </a>
-
-            </div>
-
-        </div>
-
-        <!-- CARD 5 -->
-
-        <div class="card" data-price="2100000" data-date="5">
-
-            <div class="card-image">
-
-                <img src="<?= base_url('img/orange.jpg'); ?>">
-
-                <div class="favorite-icon">
-                    <i class="fa-solid fa-heart"></i>
-                </div>
-
-            </div>
-
-            <div class="card-content">
-
-                <h3>Kost Lavender</h3>
-
-                <p>Yogyakarta</p>
-
-                <div class="price-rating">
-
-                    <span>Rp 2.100.000 / bln</span>
-
-                    <div class="stars">
-                        ★★★★★
-                    </div>
-
-                </div>
-
-                <p class="facility">
-                    WiFi, Laundry
-                </p>
-
-                <a href="<?= base_url('detail/5'); ?>">
-                    <button>Lihat Detail</button>
-                </a>
-
-            </div>
-
-        </div>
-
-        <!-- CARD 6 -->
-
-        <div class="card" data-price="2700000" data-date="6">
-
-            <div class="card-image">
-
-                <img src="<?= base_url('img/orange.jpg'); ?>">
-
-                <div class="favorite-icon">
-                    <i class="fa-solid fa-heart"></i>
-                </div>
-
-            </div>
-
-            <div class="card-content">
-
-                <h3>Elite House</h3>
-
-                <p>Surabaya Barat</p>
-
-                <div class="price-rating">
-
-                    <span>Rp 2.700.000 / bln</span>
-
-                    <div class="stars">
-                        ★★★★★
-                    </div>
-
-                </div>
-
-                <p class="facility">
-                    AC, Smart TV
-                </p>
-
-                <a href="<?= base_url('detail/6'); ?>">
-                    <button>Lihat Detail</button>
-                </a>
-
-            </div>
-
-        </div>
-
-        <!-- CARD 7 -->
-
-        <div class="card" data-price="1450000" data-date="7">
-
-            <div class="card-image">
-
-                <img src="<?= base_url('img/orange.jpg'); ?>">
-
-                <div class="favorite-icon">
-                    <i class="fa-solid fa-heart"></i>
-                </div>
-
-            </div>
-
-            <div class="card-content">
-
-                <h3>Kost Harmoni</h3>
-
-                <p>Semarang</p>
-
-                <div class="price-rating">
-
-                    <span>Rp 1.450.000 / bln</span>
-
-                    <div class="stars">
-                        ★★★★★
-                    </div>
-
-                </div>
-
-                <p class="facility">
-                    WiFi, Parkir
-                </p>
-
-                <a href="<?= base_url('detail/7'); ?>">
-                    <button>Lihat Detail</button>
-                </a>
-
-            </div>
-
-        </div>
-
-        <!-- CARD 8 -->
-
-        <div class="card" data-price="3900000" data-date="8">
-
-            <div class="card-image">
-
-                <img src="<?= base_url('img/orange.jpg'); ?>">
-
-                <div class="favorite-icon">
-                    <i class="fa-solid fa-heart"></i>
-                </div>
-
-            </div>
-
-            <div class="card-content">
-
-                <h3>Grand Kost Premium</h3>
-
-                <p>Jakarta Selatan</p>
-
-                <div class="price-rating">
-
-                    <span>Rp 3.900.000 / bln</span>
-
-                    <div class="stars">
-                        ★★★★★
-                    </div>
-
-                </div>
-
-                <p class="facility">
-                    Gym, AC, WiFi
-                </p>
-
-                <a href="<?= base_url('detail/8'); ?>">
-                    <button>Lihat Detail</button>
-                </a>
-            </div>
-
-        </div>
-
-        <!-- CARD 9 -->
-
-        <div class="card" data-price="1700000" data-date="9">
-
-            <div class="card-image">
-
-                <img src="<?= base_url('img/orange.jpg'); ?>">
-
-                <div class="favorite-icon">
-                    <i class="fa-solid fa-heart"></i>
-                </div>
-
-            </div>
-
-            <div class="card-content">
-
-                <h3>Kost Putri Amanah</h3>
-
-                <p>Malang</p>
-
-                <div class="price-rating">
-
-                    <span>Rp 1.700.000 / bln</span>
-
-                    <div class="stars">
-                        ★★★★★
-                    </div>
-
-                </div>
-
-                <p class="facility">
-                    Putri, CCTV
-                </p>
-
-                <a href="<?= base_url('detail/9'); ?>">
-                    <button>Lihat Detail</button>
-                </a>
-
-            </div>
-
-        </div>
-
-        <!-- CARD 10 -->
-
-        <div class="card" data-price="2600000" data-date="10">
-
-            <div class="card-image">
-
-                <img src="<?= base_url('img/orange.jpg'); ?>">
-
-                <div class="favorite-icon">
-                    <i class="fa-solid fa-heart"></i>
-                </div>
-
-            </div>
-
-            <div class="card-content">
-
-                <h3>Residence 88</h3>
-
-                <p>Bandung</p>
-
-                <div class="price-rating">
-
-                    <span>Rp 2.600.000 / bln</span>
-
-                    <div class="stars">
-                        ★★★★★
-                    </div>
-
-                </div>
-
-                <p class="facility">
-                    AC, WiFi, Laundry
-                </p>
-
-               <a href="<?= base_url('detail/10'); ?>">
-                    <button>Lihat Detail</button>
-                </a>
-
-            </div>
+            <a href="#" class="btn-detail">
+                Detail
+            </a>
 
         </div>
 
     </div>
+
+</div>
+
+<!-- CARD 2 -->
+
+<div class="card" data-price="1150000" data-date="2">
+
+    <div class="card-image">
+
+        <div class="favorite-icon">
+            <i class="fa-solid fa-heart"></i>
+        </div>
+
+        <img src="<?= base_url('img/orange.jpg'); ?>">
+
+    </div>
+
+    <div class="card-content">
+
+        <h3>Wisma Asri Baru</h3>
+
+        <div class="location">
+            <i class="fa-solid fa-location-dot"></i>
+            Surabaya Selatan
+        </div>
+
+        <div class="facility">
+
+            <span>Putri</span>
+            <span>Dekat Kampus</span>
+
+        </div>
+
+        <div class="rating">
+            ★★★★★ 4.8
+        </div>
+
+        <div class="card-footer">
+
+            <div class="price">
+                Rp 1.150.000
+                <small>/bulan</small>
+            </div>
+
+            <a href="#" class="btn-detail">
+                Detail
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- CARD 3 -->
+
+<div class="card" data-price="3200000" data-date="3">
+
+    <div class="card-image">
+
+        <div class="favorite-icon">
+            <i class="fa-solid fa-heart"></i>
+        </div>
+
+        <img src="<?= base_url('img/orange.jpg'); ?>">
+
+    </div>
+
+    <div class="card-content">
+
+        <h3>Grand Kost Premium</h3>
+
+        <div class="location">
+            <i class="fa-solid fa-location-dot"></i>
+            Jakarta Selatan
+        </div>
+
+        <div class="facility">
+
+            <span>WiFi</span>
+            <span>AC</span>
+            <span>Gym</span>
+
+        </div>
+
+        <div class="rating">
+            ★★★★★ 5.0
+        </div>
+
+        <div class="card-footer">
+
+            <div class="price">
+                Rp 3.200.000
+                <small>/bulan</small>
+            </div>
+
+            <a href="#" class="btn-detail">
+                Detail
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- CARD 4 -->
+
+<div class="card" data-price="1800000" data-date="4">
+
+    <div class="card-image">
+
+        <div class="favorite-icon">
+            <i class="fa-solid fa-heart"></i>
+        </div>
+
+        <img src="<?= base_url('img/orange.jpg'); ?>">
+
+    </div>
+
+    <div class="card-content">
+
+        <h3>Kost Mawar Indah</h3>
+
+        <div class="location">
+            <i class="fa-solid fa-location-dot"></i>
+            Malang
+        </div>
+
+        <div class="facility">
+
+            <span>AC</span>
+            <span>WiFi</span>
+
+        </div>
+
+        <div class="rating">
+            ★★★★★ 4.7
+        </div>
+
+        <div class="card-footer">
+
+            <div class="price">
+                Rp 1.800.000
+                <small>/bulan</small>
+            </div>
+
+            <a href="#" class="btn-detail">
+                Detail
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
 
 </section>
 
@@ -840,52 +513,36 @@ sortFilter.addEventListener('change', function(){
     const cards =
     Array.from(document.querySelectorAll('.card'));
 
-    // TERMURAH
-
     if(this.value === 'termurah'){
 
-        cards.sort((a, b) => {
-
-            return a.dataset.price -
-            b.dataset.price;
-
-        });
+        cards.sort((a,b)=>
+            a.dataset.price -
+            b.dataset.price
+        );
 
     }
-
-    // TERMAHAL
 
     else if(this.value === 'termahal'){
 
-        cards.sort((a, b) => {
-
-            return b.dataset.price -
-            a.dataset.price;
-
-        });
+        cards.sort((a,b)=>
+            b.dataset.price -
+            a.dataset.price
+        );
 
     }
-
-    // TERBARU
 
     else{
 
-        cards.sort((a, b) => {
-
-            return b.dataset.date -
-            a.dataset.date;
-
-        });
+        cards.sort((a,b)=>
+            b.dataset.date -
+            a.dataset.date
+        );
 
     }
 
-    // RESET
+    cardContainer.innerHTML='';
 
-    cardContainer.innerHTML = '';
-
-    // TAMPILKAN ULANG
-
-    cards.forEach(card => {
+    cards.forEach(card=>{
 
         cardContainer.appendChild(card);
 
@@ -894,5 +551,3 @@ sortFilter.addEventListener('change', function(){
 });
 
 </script>
-
-<?= $this->include('favorit/footer'); ?>

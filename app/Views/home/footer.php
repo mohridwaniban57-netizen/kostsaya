@@ -7,8 +7,8 @@
 
 <style>
     .footer{
-        background:  #ffffff;
-        color: #222;
+        background:  #0d206a;
+        color: #ffffff;
         text-align: center;
         padding: 20px;
         margin-top: 50px;
