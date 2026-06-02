@@ -18,6 +18,8 @@ $routes->post('/beranda/proses2', 'beranda::proses2');
 // ======================================================
 // AUTH
 // ======================================================
+// $routes->post('URL', 'Controller::Method');
+
 $routes->get('/login', 'Auth::login');
 $routes->post('/login', 'Auth::attempt');
 $routes->post('/login/attempt', 'Auth::attempt');
@@ -28,16 +30,13 @@ $routes->post('/login/attempt', 'Auth::attempt');
 
 $routes->get('/register', 'Auth::register');
 $routes->post('/register', 'Auth::store');
-
 $routes->get('/logout', 'Auth::logout');
-
 
 // ======================================================
 // KOST
 // ======================================================
 
 $routes->get('/kost', 'Kost::index');
-
 $routes->get('/kost/detail/(:num)', 'Kost::detail/$1');
 
 $routes->get('/kost/tambah', 'Kost::create');
