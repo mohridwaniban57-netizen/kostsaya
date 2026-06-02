@@ -1,4 +1,7 @@
 <?= $this->include('favorit/header'); ?>
+<pre>
+<?php print_r(session()->get('user')); ?>
+</pre>
 <script>
 
 function harusLogin(){
