@@ -42,6 +42,10 @@ class CreatePembayaranTable extends Migration
                 'type' => 'DATETIME',
                 'null' => true,
             ],
+            'deleted_at' => [
+                'type' => 'DATETIME',
+                'null' => 'null',
+            ],
 
         ]);
          $this->forge->addKey('pembayaran_id', true);

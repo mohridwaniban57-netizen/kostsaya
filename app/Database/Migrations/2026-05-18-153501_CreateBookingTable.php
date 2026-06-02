@@ -42,7 +42,14 @@ class CreateBookingTable extends Migration
                 'type' => 'DATETIME',
                 'null' => true,
             ],
+            'deleted_at' => [
+                'type' => 'DATETIME',
+                'null' => 'null',
+            ],
+
         ]);
+
+        
         $this->forge->addKey('booking_id', true);
         $this->forge->addForeignKey('user_id', 'users', 'user_id', 'CASCADE', 'CASCADE');
         $this->forge->addForeignKey('kamar_id', 'kamar', 'kamar_id', 'CASCADE', 'CASCADE');
