@@ -48,18 +48,16 @@ class CreateKamarTable extends Migration
                 'type' => 'DATETIME',
                 'null' => true,
             ],
+            'deleted_at' => [
+                'type' => 'DATETIME',
+                'null' => 'null',
+            ],
 
         ]);
 
         $this->forge->addKey('kamar_id', true);
 
-        $this->forge->addForeignKey(
-            'kos_id',
-            'kos',
-            'kos_id',
-            'CASCADE',
-            'CASCADE'
-        );
+        $this->forge->addForeignKey('kos_id','kos','kos_id','CASCADE','CASCADE');
 
         $this->forge->createTable('kamar');
     }

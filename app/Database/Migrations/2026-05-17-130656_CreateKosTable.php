@@ -52,18 +52,16 @@ class CreateKosTable extends Migration
                 'type' => 'DATETIME',
                 'null' => true,
             ],
+            'deleted_at' => [
+                'type' => 'DATETIME',
+                'null' => 'null',
+            ],
 
         ]);
 
         $this->forge->addKey('kos_id', true);
 
-        $this->forge->addForeignKey(
-            'pemilik_id',
-            'users',
-            'user_id',
-            'CASCADE',
-            'CASCADE'
-        );
+        $this->forge->addForeignKey('pemilik_id','users','user_id','CASCADE','CASCADE');
 
         $this->forge->createTable('kos');
     }
