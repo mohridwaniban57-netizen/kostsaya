@@ -1,15 +1,13 @@
-<?= $this->include('layout/header'); ?>
+<?= $this->include('home/header'); ?>
 
 <section class="hero">
 
     <!-- KIRI -->
     <div class="hero-text">
 
-        <span>WEBSITE PENCARIAN KOST</span>
-
         <h2>
-            Temukan kost terbaik <br>
-            sesuai kebutuhanmu
+            Ayo cari kost terbaik <br>
+            di sekitaran kota palu
         </h2>
 
         <p>
@@ -55,11 +53,11 @@
 
     /* HERO */
     .hero{
-        min-height: 100vh;
+        min-height: 70vh;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 60px 8%;
+        padding: 50px 8%;
         gap: 50px;
         background: linear-gradient(to right, #ffffff, #eef4ff);
     }
@@ -69,21 +67,16 @@
         flex: 1;
     }
 
-    .hero-text span{
-        color: #2563eb;
-        font-weight: bold;
-        letter-spacing: 1px;
-    }
 
     .hero-text h2{
-        font-size: 55px;
+        font-size: 45px;
         color: #1e293b;
         line-height: 1.2;
         margin: 20px 0;
     }
 
     .hero-text p{
-        font-size: 18px;
+        font-size: 15px;
         color: #64748b;
         line-height: 1.7;
         max-width: 500px;
@@ -101,7 +94,7 @@
         padding: 15px 35px;
         border: none;
         border-radius: 12px;
-        background: #2563eb;
+        background: #1c2e57;
         color: white;
         font-size: 16px;
         font-weight: bold;
@@ -158,4 +151,4 @@
     }
 </style>
 
-<?= $this->include('layout/footer'); ?>
+<?= $this->include('home/footer'); ?>
