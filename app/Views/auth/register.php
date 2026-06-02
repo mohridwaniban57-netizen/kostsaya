@@ -1,3 +1,4 @@
+<?= $this->include('home/header'); ?>
 
 
 
@@ -317,6 +318,7 @@ body{
 }
 
 </style>
+<?= $this->include('home/footer'); ?>
 
 
 

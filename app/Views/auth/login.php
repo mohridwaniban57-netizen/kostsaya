@@ -1,3 +1,5 @@
+<?= $this->include('home/header'); ?>
+
 <link rel="stylesheet" href="<?= base_url('css/login.css') ?>">
 
 <section class="login-page">
@@ -136,3 +138,4 @@
     </div>
 
 </section>
+<?= $this->include('home/footer'); ?>
