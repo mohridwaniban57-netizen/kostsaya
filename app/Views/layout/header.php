@@ -951,16 +951,8 @@ body{
                 Login
             </a>
 
-            <a href="#"
+            <a href="<?= base_url('bantuan') ?>"
             class="dropdown-item">
-
-                Pengaturan
-
-            </a>
-
-            <a href="#"
-            class="dropdown-item">
-
                 Bantuan
 
             </a>

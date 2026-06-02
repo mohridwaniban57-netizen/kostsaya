@@ -112,9 +112,14 @@ $routes->get('/admin/approve/(:num)', 'Admin::approve/$1');
 $routes->get('/admin/reject/(:num)', 'Admin::reject/$1');
 
 // favorit
-
 $routes->get('/favorit', 'Favorit::index');
 
 # Jelajahi
-
 $routes->get('/jelajahi', 'Jelajahi::index');
+
+# tentang kami
+$routes->get('/tentangkami', 'tentangKami::index');
+
+# bantuan
+$routes->get('/bantuan', 'bantuan::index');
+

@@ -6,6 +6,6 @@ class Jelajahi extends BaseController
 {
     public function index()
     {
-        return view('jelajahi');
+        return view('/jelajahi/jelajahi');
     }
 }

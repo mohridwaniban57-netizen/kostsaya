@@ -197,7 +197,7 @@
 
             <li>
 
-                <a href="#" class="btn-pusat">
+                <a href="<?= base_url('tentangkami'); ?>" class="btn-pusat">
 
                     <i class="fa-solid fa-circle-question"></i>
 

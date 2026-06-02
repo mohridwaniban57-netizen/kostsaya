@@ -548,7 +548,7 @@ body{
 
             <div class="hero-btns">
 
-                <a href="/kost" class="btn-main">
+                <a href="<?= base_url('jelajahi') ?>" class="btn-main">
                     Jelajahi Kost
                 </a>
 
