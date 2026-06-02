@@ -8,8 +8,19 @@ class PembayaranModel extends Model
 {
     protected $table = 'pembayaran';
     protected $primaryKey = 'pembayaran_id';
-    
-    protected $allowedFields = ['booking_id', 'user_id', 'bukti', 'status'];
+    protected $useAutoIncrement = true;
+    protected $returnType = 'array';
+    protected $useSoftDeletes = true;
+    protected $protectFields= true;
+    protected $allowedFields = [
+        'bukti',
+        'status'
+    ];
 
     protected $useTimestamps = true;
+    protected $dateFormat = 'datetime';
+    protected $createdField = 'created_at';
+    protected $updatedField = 'updated_at';
+    protected $deletedField = 'deleted_at';
+
 }
