@@ -107,6 +107,7 @@ $routes->post('/pembayaran/upload', 'Pembayaran::upload');
 // ======================================================
 
 $routes->get('/admin', 'Admin::dashboard');
+$routes->get('/admin/dashboard', 'Admin::dashboard');
 
 $routes->get('/admin/booking', 'Admin::booking');
 
