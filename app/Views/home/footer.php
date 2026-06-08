@@ -10,13 +10,13 @@
         background:  #0d206a;
         color: #ffffff;
         text-align: center;
-        padding: 20px;
+        padding: 25px;
         margin-top: 50px;
     }
 
     .footer p{
         font-size: 15px;
-        letter-spacing: 0.5px;
+        letter-spacing: 1.5px;
     }
 
     /* RESPONSIVE */

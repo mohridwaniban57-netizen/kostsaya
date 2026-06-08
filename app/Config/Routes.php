@@ -11,7 +11,7 @@ $routes->post('/awal/proses', 'Home::proses');
 
 # BERANDA
 $routes->get('/beranda', 'beranda::index');
-$routes->post('/beranda/proses', 'beranda::proses');
+// $routes->post('/beranda/proses', 'beranda::proses');
 $routes->post('/beranda/proses1', 'beranda::proses1');
 $routes->post('/beranda/proses2', 'beranda::proses2');
 

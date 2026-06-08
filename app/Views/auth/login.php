@@ -60,7 +60,6 @@
                         placeholder="Masukkan email"
                         required
                     >
-
                 </div>
 
                 <!-- PASSWORD -->

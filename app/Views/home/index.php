@@ -150,5 +150,4 @@
         }
     }
 </style>
-
 <?= $this->include('home/footer'); ?>
