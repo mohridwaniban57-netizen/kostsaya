@@ -13,10 +13,11 @@ class KosModel extends Model
     protected $useSoftDeletes = true;
     protected $protectFields= true;
     protected $allowedFields = [
-        'nama_kos',
-        'lokasi',
-        'harga',
-        'foto'
+    'pemilik_id',
+    'nama_kos',
+    'lokasi',
+    'harga',
+    'foto'
     ];
 
     protected $useTimestamps = true;

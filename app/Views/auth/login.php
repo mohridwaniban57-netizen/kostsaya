@@ -76,40 +76,7 @@
                     >
 
                 </div>
-
-                <!-- ROLE -->
-                <div class="form-group">
-
-                    <label for="role">
-                        Login sebagai
-                    </label>
-
-                    <select
-                        id="role"
-                        name="role"
-                        class="form-control"
-                        required
-                    >
-
-                        <option value="" disabled selected hidden>
-                            Pilih peran
-                        </option>
-
-                        <option value="admin">
-                            Admin
-                        </option>
-
-                        <option value="pemilik">
-                            Pemilik Kost
-                        </option>
-
-                        <option value="user">
-                            Pencari Kost
-                        </option>
-
-                    </select>
-
-                </div>
+                
 
                 <!-- BUTTON -->
                 <button

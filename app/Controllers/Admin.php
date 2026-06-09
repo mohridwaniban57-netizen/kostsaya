@@ -1,36 +1,145 @@
 <?php
+
 namespace App\Controllers;
 
-use App\Models\BookingModel;
-use App\Models\PembayaranModel;
+use App\Models\KosModel;
 
-class Admin extends BaseController {
+class Admin extends BaseController
+{
+    protected $kosModel;
 
-    public function dashboard() {
-        return view('admin/dashboard');
+    public function __construct()
+    {
+        $this->kosModel = new KosModel();
     }
 
-    public function booking() {
-        $model = new BookingModel();
+    // Dashboard
+    public function dashboard()
+    {
+        $data = [
+            'totalKos' => $this->kosModel->countAllResults()
+        ];
 
-        return view('admin/booking', [
-            'booking' => $model->findAll()
+        return view('admin/dashboard', $data);
+    }
+
+    // Menampilkan Data Kost
+    public function index()
+    {
+        $currentPage = $this->request->getVar('page_kos') ?? 1;
+
+        $data['kos'] = $this->kosModel->paginate(10, 'kos');
+        $data['pager'] = $this->kosModel->pager;
+        $data['currentPage'] = $currentPage;
+
+        return view('admin/kos/index', $data);
+    }
+
+    // Form Tambah Kost
+    public function create()
+    {
+        return view('admin/kos/create');
+    }
+
+    // Simpan Data Kost
+    public function store()
+    {
+        $rules = [
+            'nama_kos' => 'required',
+            'lokasi'   => 'required',
+            'harga'    => 'required|numeric',
+            'foto'     => 'uploaded[foto]|max_size[foto,2048]|is_image[foto]'
+        ];
+
+        if (!$this->validate($rules)) {
+            return redirect()->back()
+                ->withInput()
+                ->with('errors', $this->validator->getErrors());
+        }
+
+        // Upload Foto
+        $foto = $this->request->getFile('foto');
+
+        $namaFoto = null;
+
+        if ($foto->isValid() && !$foto->hasMoved()) {
+
+            $namaFoto = $foto->getRandomName();
+
+            $foto->move('uploads', $namaFoto);
+        }
+
+        $this->kosModel->save([
+            'pemilik_id' => 1, // sementara
+            'nama_kos'   => $this->request->getPost('nama_kos'),
+            'lokasi'     => $this->request->getPost('lokasi'),
+            'harga'      => $this->request->getPost('harga'),
+            'foto'       => $namaFoto
+        ]);
+
+        return $this->response->setJSON([
+            'success' => true,
+            'message' => 'Data kost berhasil ditambahkan'
         ]);
     }
 
-    public function approve($id) {
-        $model = new BookingModel();
+    // Form Edit
+    public function edit($id)
+    {
+        $data['kost'] = $this->kosModel->find($id);
 
-        $model->update($id, ['status' => 'approved']);
-
-        return redirect()->back();
+        return view('admin/kos/edit', $data);
     }
 
-    public function reject($id) {
-        $model = new BookingModel();
+    // Update Data Kost
+    public function update($id)
+    {
+        $kost = $this->kosModel->find($id);
 
-        $model->update($id, ['status' => 'rejected']);
+        $dataUpdate = [
+            'nama_kos' => $this->request->getPost('nama_kos'),
+            'lokasi'   => $this->request->getPost('lokasi'),
+            'harga'    => $this->request->getPost('harga')
+        ];
 
-        return redirect()->back();
+        $foto = $this->request->getFile('foto');
+
+        if ($foto && $foto->isValid() && !$foto->hasMoved()) {
+
+            $namaFoto = $foto->getRandomName();
+
+            $foto->move('uploads', $namaFoto);
+
+            // Hapus foto lama
+            if (!empty($kost['foto']) && file_exists('uploads/' . $kost['foto'])) {
+                unlink('uploads/' . $kost['foto']);
+            }
+
+            $dataUpdate['foto'] = $namaFoto;
+        }
+
+        $this->kosModel->update($id, $dataUpdate);
+
+        return $this->response->setJSON([
+            'success' => true,
+            'message' => 'Data kost berhasil diperbarui'
+        ]);
+    }
+
+    // Hapus Data Kost
+    public function delete($id)
+    {
+        $kost = $this->kosModel->find($id);
+
+        if (!empty($kost['foto']) && file_exists('uploads/' . $kost['foto'])) {
+            unlink('uploads/' . $kost['foto']);
+        }
+
+        $this->kosModel->delete($id);
+
+        return $this->response->setJSON([
+            'success' => true,
+            'message' => 'Data kost berhasil dihapus'
+        ]);
     }
 }

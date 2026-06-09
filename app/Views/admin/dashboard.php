@@ -1,212 +1,486 @@
-<?= $this->include('layout/header') ?>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard Admin - KostSaya</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
-.admin-dashboard{
-    background: #f4f6f9;
-    min-height: 100vh;
-    padding: 30px;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
 }
 
-.dashboard-header{
-    margin-bottom: 30px;
+body{
+    background:#eef2f7;
 }
 
-.dashboard-header h1{
-    font-size: 32px;
-    font-weight: 700;
-    color: #222;
+/* SIDEBAR */
+
+.sidebar{
+    position:fixed;
+    left:0;
+    top:0;
+    width:270px;
+    height:100vh;
+    background:linear-gradient(180deg,#2563eb,#1e3a8a);
+    color:#fff;
+    box-shadow:4px 0 15px rgba(0,0,0,.1);
 }
 
-.dashboard-header p{
-    color: #777;
-    margin-top: 5px;
+.logo{
+    text-align:center;
+    padding:30px 20px;
+    border-bottom:1px solid rgba(255,255,255,.15);
 }
 
-.dashboard-card{
-    display: flex;
-    align-items: center;
-    padding: 25px;
-    border-radius: 15px;
-    color: #fff;
-    box-shadow: 0 5px 20px rgba(0,0,0,.1);
-    transition: .3s;
+.logo h2{
+    font-size:28px;
+    font-weight:bold;
 }
 
-.dashboard-card:hover{
-    transform: translateY(-5px);
+.logo p{
+    opacity:.8;
+    font-size:13px;
 }
 
-.dashboard-card.primary{
-    background: linear-gradient(135deg,#0d6efd,#4f8cff);
+.menu{
+    list-style:none;
+    padding:15px;
 }
 
-.dashboard-card.success{
-    background: linear-gradient(135deg,#198754,#43c27a);
+.menu li{
+    margin-bottom:8px;
 }
 
-.dashboard-card.dark{
-    background: linear-gradient(135deg,#212529,#495057);
+.menu a{
+    text-decoration:none;
+    color:white;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:14px 16px;
+    border-radius:12px;
+    transition:.3s;
 }
 
-.card-icon{
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background: rgba(255,255,255,.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 20px;
+.menu a:hover{
+    background:rgba(255,255,255,.15);
+    transform:translateX(5px);
 }
 
-.card-icon i{
-    font-size: 30px;
+.menu i{
+    width:20px;
 }
 
-.card-content h3{
-    font-size: 32px;
-    font-weight: bold;
-    margin: 0;
+/* MAIN */
+
+.main{
+    margin-left:270px;
+    min-height:100vh;
 }
 
-.card-content p{
-    margin: 0;
-    font-size: 16px;
+/* TOPBAR */
+
+.topbar{
+    background:white;
+    padding:20px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 15px rgba(0,0,0,.05);
 }
 
-.content-card{
-    background: #fff;
-    border-radius: 15px;
-    padding: 25px;
-    box-shadow: 0 3px 15px rgba(0,0,0,.08);
+.topbar-left h2{
+    color:#111827;
 }
 
-.content-card h4{
-    margin-bottom: 20px;
-    font-weight: 600;
-    color: #333;
+.topbar-left p{
+    color:#6b7280;
+    margin-top:3px;
+    font-size:14px;
 }
 
-.table th{
-    background: #f8f9fa;
+.topbar-right{
+    display:flex;
+    align-items:center;
+    gap:20px;
 }
 
-.list-group-item{
-    border: none;
-    border-bottom: 1px solid #eee;
+.search{
+    background:#f3f4f6;
+    padding:10px 15px;
+    border-radius:30px;
 }
+
+.search input{
+    border:none;
+    background:none;
+    outline:none;
+}
+
+.profile{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.avatar{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:#2563eb;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:18px;
+}
+
+/* CONTENT */
+
+.content{
+    padding:30px;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-bottom:30px;
+}
+
+.card{
+    color:white;
+    padding:25px;
+    border-radius:20px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card i{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.card h2{
+    font-size:30px;
+    margin-bottom:5px;
+}
+
+.blue{
+    background:linear-gradient(135deg,#3b82f6,#2563eb);
+}
+
+.green{
+    background:linear-gradient(135deg,#10b981,#059669);
+}
+
+.orange{
+    background:linear-gradient(135deg,#f59e0b,#d97706);
+}
+
+.red{
+    background:linear-gradient(135deg,#ef4444,#dc2626);
+}
+
+/* TABLE */
+
+.table-card{
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 3px 15px rgba(0,0,0,.05);
+}
+
+.table-card h3{
+    margin-bottom:20px;
+    color:#111827;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table th{
+    background:#2563eb;
+    color:white;
+    padding:15px;
+}
+
+table td{
+    padding:15px;
+    border-bottom:1px solid #eee;
+}
+
+table tr:hover{
+    background:#f9fafb;
+}
+
+.status{
+    color:white;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:12px;
+}
+
+.success{
+    background:#10b981;
+}
+
+.pending{
+    background:#f59e0b;
+}
+
+.danger{
+    background:#ef4444;
+}
+
+.footer{
+    margin-top:30px;
+    text-align:center;
+    color:#666;
+    font-size:14px;
+}
+
 </style>
+</head>
+<body>
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- SIDEBAR -->
 
-<div class="admin-dashboard">
-    <div class="container-fluid">
+<div class="sidebar">
 
-        <div class="dashboard-header">
-            <h1>Dashboard Admin</h1>
-            <p>Selamat datang di Sistem Informasi Kost</p>
+    <div class="logo">
+        <h2>KostSaya</h2>
+        <p>ADMIN PANEL</p>
+    </div>
+
+    <ul class="menu">
+
+        <li>
+            <a href="<?= base_url('admin/dashboard') ?>">
+                <i class="fas fa-home"></i>
+                Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fas fa-users"></i>
+                Data Pengguna
+            </a>
+        </li>
+
+        <li>
+            <a href="<?= base_url('admin/kost') ?>">
+                <i class="fas fa-building"></i>
+                Data Kost
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fas fa-bed"></i>
+                Data Kamar
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fas fa-calendar-check"></i>
+                Booking
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fas fa-money-bill-wave"></i>
+                Pembayaran
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fas fa-chart-line"></i>
+                Laporan
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fas fa-cog"></i>
+                Pengaturan
+            </a>
+        </li>
+
+        <li>
+            <a href="<?= base_url('logout') ?>">
+                <i class="fas fa-sign-out-alt"></i>
+                Logout
+            </a>
+        </li>
+
+    </ul>
+
+</div>
+
+<!-- MAIN -->
+
+<div class="main">
+
+    <!-- TOPBAR -->
+
+    <div class="topbar">
+
+        <div class="topbar-left">
+            <h2>Dashboard Admin</h2>
+            <p>Selamat Datang di Sistem Informasi KostSaya</p>
         </div>
 
-        <div class="row g-4">
+        <div class="topbar-right">
 
-            <div class="col-md-4">
-                <div class="dashboard-card primary">
-                    <div class="card-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <div class="card-content">
-                        <h3>25</h3>
-                        <p>Total Kost</p>
-                    </div>
-                </div>
+            <div class="search">
+                <input type="text" placeholder="Cari data...">
             </div>
 
-            <div class="col-md-4">
-                <div class="dashboard-card success">
-                    <div class="card-icon">
-                        <i class="fas fa-calendar-check"></i>
-                    </div>
-                    <div class="card-content">
-                        <h3>120</h3>
-                        <p>Total Booking</p>
-                    </div>
+            <div class="profile">
+
+                <div class="avatar">
+                    <i class="fas fa-user"></i>
                 </div>
-            </div>
 
-            <div class="col-md-4">
-                <div class="dashboard-card dark">
-                    <div class="card-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <div class="card-content">
-                        <h3>85</h3>
-                        <p>Total User</p>
-                    </div>
+                <div>
+                    <strong>Administrator</strong><br>
+                    <small>Online</small>
                 </div>
-            </div>
 
-        </div>
-
-        <div class="row mt-5">
-
-            <div class="col-md-8">
-                <div class="content-card">
-                    <h4>Aktivitas Terbaru</h4>
-
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th>User</th>
-                                <th>Aktivitas</th>
-                                <th>Tanggal</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Ridwan</td>
-                                <td>Booking Kost Mawar</td>
-                                <td>05 Juni 2026</td>
-                            </tr>
-                            <tr>
-                                <td>Andi</td>
-                                <td>Tambah Data Kost</td>
-                                <td>04 Juni 2026</td>
-                            </tr>
-                            <tr>
-                                <td>Siti</td>
-                                <td>Registrasi Akun</td>
-                                <td>04 Juni 2026</td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="content-card">
-
-                    <h4>Informasi Sistem</h4>
-
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            Total Kost Aktif : <strong>25</strong>
-                        </li>
-                        <li class="list-group-item">
-                            Booking Hari Ini : <strong>8</strong>
-                        </li>
-                        <li class="list-group-item">
-                            User Baru : <strong>5</strong>
-                        </li>
-                    </ul>
-
-                </div>
             </div>
 
         </div>
 
     </div>
+
+    <!-- CONTENT -->
+
+    <div class="content">
+
+        <div class="cards">
+
+            <div class="card blue">
+                <i class="fas fa-building"></i>
+                <h2>25</h2>
+                <p>Total Kost</p>
+            </div>
+
+            <div class="card green">
+                <i class="fas fa-bed"></i>
+                <h2>120</h2>
+                <p>Total Kamar</p>
+            </div>
+
+            <div class="card orange">
+                <i class="fas fa-users"></i>
+                <h2>85</h2>
+                <p>Total Pengguna</p>
+            </div>
+
+            <div class="card red">
+                <i class="fas fa-calendar-check"></i>
+                <h2>50</h2>
+                <p>Total Booking</p>
+            </div>
+
+        </div>
+
+        <!-- AKTIVITAS -->
+
+        <div class="table-card">
+
+            <h3>Aktivitas Terbaru</h3>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>Aktivitas</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Ridwan</td>
+                        <td>Booking Kost Mawar</td>
+                        <td>
+                            <span class="status success">
+                                Berhasil
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Andi</td>
+                        <td>Pembayaran Kost</td>
+                        <td>
+                            <span class="status pending">
+                                Menunggu
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Rahma</td>
+                        <td>Tambah Kost Baru</td>
+                        <td>
+                            <span class="status success">
+                                Selesai
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>Budi</td>
+                        <td>Booking Kamar</td>
+                        <td>
+                            <span class="status danger">
+                                Ditolak
+                            </span>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <div class="footer">
+            © <?= date('Y') ?> KostSaya - Sistem Informasi Booking Kost
+        </div>
+
+    </div>
+
 </div>
 
-<?= $this->include('home/footer') ?>
+</body>
+</html>

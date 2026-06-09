@@ -101,7 +101,6 @@ $routes->get('/pembayaran/upload', 'Pembayaran::uploadForm');
 
 $routes->post('/pembayaran/upload', 'Pembayaran::upload');
 
-
 // ======================================================
 // ADMIN
 // ======================================================
@@ -109,11 +108,18 @@ $routes->post('/pembayaran/upload', 'Pembayaran::upload');
 $routes->get('/admin', 'Admin::dashboard');
 $routes->get('/admin/dashboard', 'Admin::dashboard');
 
-$routes->get('/admin/booking', 'Admin::booking');
+// DATA KOST
+$routes->get('/admin/kost', 'Admin::index');
 
-$routes->get('/admin/approve/(:num)', 'Admin::approve/$1');
+$routes->get('/admin/kost/create', 'Admin::create');
 
-$routes->get('/admin/reject/(:num)', 'Admin::reject/$1');
+$routes->post('/admin/kost/store', 'Admin::store');
+
+$routes->get('/admin/kost/edit/(:num)', 'Admin::edit/$1');
+
+$routes->post('/admin/kost/update/(:num)', 'Admin::update/$1');
+
+$routes->get('/admin/kost/delete/(:num)', 'Admin::delete/$1');
 
 // favorit
 $routes->get('/favorit', 'Favorit::index');
@@ -127,4 +133,5 @@ $routes->get('/tentangkami', 'tentangKami::index');
 
 # bantuan
 $routes->get('/bantuan', 'bantuan::index');
+
 
