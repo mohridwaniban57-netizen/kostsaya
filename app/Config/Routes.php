@@ -123,7 +123,7 @@ $routes->get('/admin/kost/delete/(:num)', 'Admin::delete/$1');
 
 // favorit
 $routes->get('/favorit', 'Favorit::index');
-$routes->get('/detail/(:num)', 'Favorit::detail/$1');
+
 
 # Jelajahi
 $routes->get('/jelajahi', 'Jelajahi::index');
@@ -133,5 +133,23 @@ $routes->get('/tentangkami', 'tentangKami::index');
 
 # bantuan
 $routes->get('/bantuan', 'bantuan::index');
+
+//beranda ke detail
+$routes->get(
+'jelajahi',
+'Jelajahi::index'
+);
+
+$routes->get(
+'detail/(:num)',
+'beranda::detail/$1'
+);
+
+$routes->get(
+'favorit/detail/(:num)',
+'Favorit::detail/$1'
+);
+
+
 
 
