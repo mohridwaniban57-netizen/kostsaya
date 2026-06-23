@@ -353,117 +353,98 @@ body{
 
 <div class="kost-grid">
 
-<?php
+<?php if(!empty($kost)): ?>
 
-$nama_kost = [
-    "Kost Premium Tondo",
-    "Kost Talise Residence",
-    "Kost Besusu Indah",
-    "Kost Birobuli Elite",
-    "Kost Mamboro Asri",
-    "Kost Petobo Residence",
-    "Kost Palupi Modern",
-    "Kost Duyu Comfort",
-    "Kost Tipo Residence",
-    "Kost Pengawu Elite",
-    "Kost Lasoani Indah",
-    "Kost Kawatuna Premium"
-];
-
-$lokasi = [
-    "Tondo, Kota Palu",
-    "Talise, Kota Palu",
-    "Besusu Barat, Kota Palu",
-    "Birobuli Selatan, Kota Palu",
-    "Mamboro, Kota Palu",
-    "Petobo, Kota Palu",
-    "Palupi, Kota Palu",
-    "Duyu, Kota Palu",
-    "Tipo, Kota Palu",
-    "Pengawu, Kota Palu",
-    "Lasoani, Kota Palu",
-    "Kawatuna, Kota Palu"
-];
-
-$harga = [
-    "Rp850.000",
-    "Rp900.000",
-    "Rp1.000.000",
-    "Rp1.100.000",
-    "Rp950.000",
-    "Rp1.250.000",
-    "Rp800.000",
-    "Rp1.300.000",
-    "Rp900.000",
-    "Rp1.150.000",
-    "Rp1.050.000",
-    "Rp1.400.000"
-];
-
-for($i=0;$i<12;$i++):
-?>
+<?php foreach($kost as $k): ?>
 
 <div class="kost-card">
 
-    <div class="kost-image">
+<div class="kost-image">
 
-        <img src="<?= base_url('img/orange.jpg'); ?>">
+<img
+src="<?= !empty($k['foto'])
 
-    </div>
+? base_url('uploads/'.$k['foto'])
 
-    <div class="kost-content">
-
-        <h3><?= $nama_kost[$i]; ?></h3>
-
-        <div class="location">
-
-            <i class="fa-solid fa-location-dot"></i>
-
-            <?= $lokasi[$i]; ?>
-
-        </div>
-
-        <div class="facilities">
-
-            <span>WiFi</span>
-            <span>AC</span>
-            <span>Parkir</span>
-
-        </div>
-
-        <div class="rating">
-
-            ★★★★★ 4.9
-
-        </div>
-
-        <div class="card-footer">
-
-            <div class="price">
-
-                <?= $harga[$i]; ?>
-
-                <small style="
-                    display:block;
-                    font-size:11px;
-                    color:#64748b;
-                    font-weight:500;
-                ">
-                    /bulan
-                </small>
-
-            </div>
-
-            <a href="#" class="btn-detail">
-                Detail
-            </a>
-
-        </div>
-
-    </div>
+: base_url('img/orange.jpg') ?>">
 
 </div>
 
-<?php endfor; ?>
+<div class="kost-content">
+
+<h3>
+
+<?= $k['nama_kos'] ?>
+
+</h3>
+
+<div class="location">
+
+<i class="fa-solid fa-location-dot"></i>
+
+<?= $k['lokasi'] ?>
+
+</div>
+
+
+
+<div class="card-footer">
+
+<div class="price">
+
+Rp<?= number_format(
+$k['harga'],
+0,
+',',
+'.'
+) ?>
+
+<small
+style="
+display:block;
+font-size:11px;
+color:#64748b;
+">
+
+/bulan
+
+</small>
+
+</div>
+
+<a
+
+href="<?= site_url(
+'detail/'.$k['kos_id']
+) ?>"
+
+class="btn-detail">
+
+Detail
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<?php endforeach; ?>
+
+<?php else: ?>
+
+<h2
+style="
+text-align:center;
+padding:60px;
+">
+
+Belum ada data kost
+
+</h2>
+
+<?php endif; ?>
+
 
 </div>
