@@ -29,13 +29,18 @@ class Auth extends BaseController
             )
         ) {
 
-            session()->set('user', $user);
+            session()->set([
+                'user_id' => $user['user_id'],
+                'nama'    => $user['nama'],
+                'email'   => $user['email'],
+                'role'    => $user['role']
+            ]);
 
             if ($user['role'] == 'admin') {
 
                 return redirect()->to('/admin/dashboard');
 
-            } elseif ($user['role'] == 'pemilik_kost') {
+            } elseif ($user['role'] == 'pemilik') {
 
                 return redirect()->to('/pemilik/dashboard');
 
@@ -86,7 +91,7 @@ class Auth extends BaseController
 
     public function logout()
     {
-        session()->remove('user');
+        session()->destroy();
 
         return redirect()->to('/beranda');
     }

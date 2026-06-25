@@ -65,20 +65,24 @@ $routes->get('/kamar/edit/(:num)', 'Kamar::edit/$1');
 $routes->post('/kamar/update/(:num)', 'Kamar::update/$1');
 
 $routes->get('/kamar/delete/(:num)', 'Kamar::delete/$1');
-$routes->get('/pemilik/data-kos', 'pemilikKosController::index');
 
-$routes->get('/pemilik/tambah-kos', 'pemilikKosController::tambah');
 
-$routes->get('/pemilik/edit-kos/(:num)', 'pemilikKosController::edit/$1');
+//PEMILIK KOST
 
-$routes->get('/pemilik/hapus-kos/(:num)', 'pemilikKosController::hapus/$1');
 
-// Booking Masuk
-$routes->get('/pemilik/booking', 'pemilikBookingController::index');
+$routes->get('pemilik/dashboard', 'pemilik::dashboard');
 
-// Profil Pemilik
-$routes->get('/pemilik/profil', 'pemilikController::profil');
+$routes->get('pemilik/kost', 'pemilik::kost');
 
+$routes->get('pemilik/tambah-kost', 'pemilik::tambahKost');
+
+$routes->post('pemilik/simpan-kost', 'pemilik::simpanKost');
+$routes->get('pemilik/detail-kost/(:num)','Pemilik::detailKost/$1');
+$routes->get('pemilik/kost/detail/(:num)','Pemilik::detailKost/$1');
+$routes->get('pemilik/edit-kost/(:num)','pemilik::editKost/$1');
+$routes->post('pemilik/update-kost/(:num)','pemilik::updateKost/$1');
+
+$routes->get('pemilik/kost/detail/(:num)','pemilik::detailKost/$1');
 
 // ======================================================
 // BOOKING
