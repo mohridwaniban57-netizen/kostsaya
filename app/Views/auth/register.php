@@ -86,11 +86,11 @@
                                 Admin
                             </option>
 
-                            <option value="pemilik_kost">
+                            <option value="pemilik">
                                 Pemilik Kost
                             </option>
 
-                            <option value="pencari_kost">
+                            <option value="user">
                                 Pencari Kost
                             </option>
 
@@ -319,6 +319,3 @@ body{
 
 </style>
 <?= $this->include('home/footer'); ?>
-
-
-

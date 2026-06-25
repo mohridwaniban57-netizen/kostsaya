@@ -26,7 +26,7 @@
         }
 
         body{
-            background:#f4f7fb;
+            background: #f4f7fb;
         }
 
         /* =========================
@@ -59,6 +59,7 @@
            LOGO
         ========================= */
 
+    
         .logo{
 
             display:flex;
