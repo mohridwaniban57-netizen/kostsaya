@@ -6,21 +6,17 @@ use App\Models\UserModel;
 
 class Auth extends BaseController
 {
-    // Menampilkan halaman login
     public function login()
     {
         return view('auth/login');
     }
-
-    // Memproses LOGIN user
     public function attempt()
     {
         $model = new UserModel();
 
-        $user = $model
-            ->where('email', $this->request->getPost('email'))
+        $user = $model->where('email', $this->request->getPost('email'))
             ->first();
-
+            
         if (
             $user &&
             password_verify(
@@ -28,8 +24,7 @@ class Auth extends BaseController
                 $user['password']
             )
         ) {
-
-            session()->set('user', $user);
+            session()->set(['user' => $user,'isLoggedIn' => true]);
 
             if ($user['role'] == 'admin') {
                 return redirect()->to('/admin/dashboard');
@@ -42,20 +37,16 @@ class Auth extends BaseController
 
         return redirect()
             ->back()
-            ->with('error', 'Login gagal');
+            ->with('error', 'password salah');
     }
 
-    // Menampilkan halaman register
     public function register()
     {
         return view('auth/register');
     }
-
-    // Menyimpan data user baru ke database (REGISTER)
     public function store()
     {
         try {
-
             $model = new UserModel();
 
             $model->save([
@@ -67,7 +58,6 @@ class Auth extends BaseController
                 ),
                 'role'     => $this->request->getPost('role')
             ]);
-
             return redirect()
                 ->to('/login')
                 ->with('success', 'Registrasi berhasil! Silakan login.');
@@ -75,10 +65,8 @@ class Auth extends BaseController
         } catch (\Exception $e) {
 
             die($e->getMessage());
-
         }
     }
-
     public function logout()
     {
         session()->destroy();

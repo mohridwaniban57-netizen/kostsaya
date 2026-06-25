@@ -30,6 +30,7 @@ $routes->post('/login/attempt', 'Auth::attempt');
 
 $routes->get('/register', 'Auth::register');
 $routes->post('/register', 'Auth::store');
+$routes->get('/admin/dashboard', 'Admin::dashboard', ['filter' => 'auth']);
 $routes->get('/logout', 'Auth::logout');
 
 // ======================================================
@@ -106,7 +107,7 @@ $routes->post('/pembayaran/upload', 'Pembayaran::upload');
 // ======================================================
 
 $routes->get('/admin', 'Admin::dashboard');
-$routes->get('/admin/dashboard', 'Admin::dashboard');
+// $routes->get('/admin/dashboard', 'Admin::dashboard');
 
 // DATA KOST
 $routes->get('/admin/kost', 'Admin::index');
