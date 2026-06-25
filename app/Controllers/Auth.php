@@ -32,11 +32,16 @@ class Auth extends BaseController
             session()->set('user', $user);
 
             if ($user['role'] == 'admin') {
+
                 return redirect()->to('/admin/dashboard');
+
             } elseif ($user['role'] == 'pemilik_kost') {
+
                 return redirect()->to('/pemilik/dashboard');
+
             } else {
-                return redirect()->to('/pencari_kost/dashboard');
+
+                return redirect()->to('/beranda');
             }
         }
 
@@ -81,8 +86,8 @@ class Auth extends BaseController
 
     public function logout()
     {
-        session()->destroy();
+        session()->remove('user');
 
-        return redirect()->to('/login');
+        return redirect()->to('/beranda');
     }
 }

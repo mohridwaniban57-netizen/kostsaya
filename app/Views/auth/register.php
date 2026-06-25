@@ -1,3 +1,4 @@
+<?= $this->include('home/header'); ?>
 
 
 
@@ -17,8 +18,8 @@
                 </h1>
 
                 <p>
-                    Daftarkan akun Anda di KostSaya untuk menikmati kemudahan
-                    dalam mencari dan mengelola pilihan kost sesuai kebutuhan.
+                    Cari kost nyaman, aman, dan sesuai kebutuhanmu
+                    hanya dalam satu tempat.
                 </p>
 
             </div>
@@ -30,7 +31,7 @@
 
             <div class="login-form">
 
-                <h2>Daftar</h2>
+                <h2>Register</h2>
 
                 <p class="subtitle">
                     Buat akun baru untuk mulai mencari kost
@@ -73,17 +74,6 @@
 
                     <div class="input-group">
 
-                        <label>Konfirmasi Password</label>
-
-                        <input type="password"
-                            name="konfirmasi_password"
-                            placeholder="Masukkan ulang password"
-                            required>
-
-                    </div>
-
-                    <div class="input-group">
-
                         <label>Daftar Sebagai</label>
 
                         <select name="role" required>
@@ -96,11 +86,11 @@
                                 Admin
                             </option>
 
-                            <option value="pemilik_kost">
+                            <option value="pemilik">
                                 Pemilik Kost
                             </option>
 
-                            <option value="pencari_kost">
+                            <option value="user">
                                 Pencari Kost
                             </option>
 
@@ -109,7 +99,7 @@
                     </div>
 
                     <button type="submit" class="btn-login">
-                        Buat Akun
+                        Register
                     </button>
 
                 </form>
@@ -144,7 +134,6 @@
 body{
     font-family: 'Poppins', sans-serif;
     background: #f3f5fb;
-    zoom: 0.9;
 }
 
 /* ===== PAGE ===== */
@@ -159,8 +148,8 @@ body{
 
 /* ===== CONTAINER ===== */
 .login-container{
-    width: 900px;
-    min-height: 560px;
+    width: 1000px;
+    min-height: 650px;
     display: flex;
     border-radius: 30px;
     overflow: hidden;
@@ -181,7 +170,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 30px;
+    padding: 40px;
 }
 
 .left-content{
@@ -191,7 +180,7 @@ body{
 }
 
 .left-content h1{
-    font-size: 40px;
+    font-size: 48px;
     font-weight: 700;
     margin-bottom: 20px;
 }
@@ -201,8 +190,8 @@ body{
 }
 
 .left-content p{
-    font-size: 15px;
-    line-height: 1.6;
+    font-size: 17px;
+    line-height: 1.8;
     color: #dce4ff;
 }
 
@@ -213,35 +202,35 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 35px;
+    padding: 50px;
 }
 
 .login-form{
     width: 100%;
-    max-width: 380px;
+    max-width: 420px;
 }
 
 .login-form h2{
-    font-size: 30px;
-    color:  #3461ff;
+    font-size: 36px;
+    color: #1f2a44;
     margin-bottom: 10px;
 }
 
 .subtitle{
     color: #6b7280;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
     font-size: 15px;
 }
 
 /* ===== INPUT ===== */
 .input-group{
-    margin-bottom: 15px;
+    margin-bottom: 22px;
 }
 
 .input-group label{
     display: block;
-    margin-bottom: 5px;
-    font-size: 13px;
+    margin-bottom: 8px;
+    font-size: 14px;
     font-weight: 600;
     color: #1f2a44;
 }
@@ -249,11 +238,11 @@ body{
 .input-group input,
 .input-group select{
     width: 100%;
-    height: 48px;
+    height: 55px;
     border: 1px solid #dbe2f0;
     border-radius: 14px;
     padding: 0 18px;
-    font-size: 14px;
+    font-size: 15px;
     background: #f9fbff;
     transition: 0.3s;
 }
@@ -269,16 +258,16 @@ body{
 /* ===== BUTTON ===== */
 .btn-login{
     width: 100%;
-    height: 48px;
+    height: 55px;
     border: none;
     border-radius: 14px;
     background: linear-gradient(90deg, #2f5bea, #3461ff);
     color: white;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
     cursor: pointer;
     transition: 0.3s;
-    margin-top: 5px;
+    margin-top: 10px;
     box-shadow: 0 8px 20px rgba(52,97,255,0.25);
 }
 
@@ -290,9 +279,9 @@ body{
 /* ===== BOTTOM TEXT ===== */
 .bottom-text{
     text-align: center;
-    margin-top: 15px;
+    margin-top: 25px;
     color: #6b7280;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .bottom-text a{
@@ -329,5 +318,4 @@ body{
 }
 
 </style>
-
-
+<?= $this->include('home/footer'); ?>

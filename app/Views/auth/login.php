@@ -1,76 +1,108 @@
-<div class="kost-login-page">
+<?= $this->include('home/header'); ?>
 
-    <div class="kost-login-container">
 
-        <div class="kost-login-left">
 
-            <div class="kost-login-left-content">
+<section class="login-page">
 
-                <h1>Kost<span>Saya</span></h1>
+    <!-- BACKGROUND IMAGE -->
+    <div class="background-overlay"></div>
 
-                <p>
-                    Selamat datang di KostSaya. Masuk untuk menemukan 
-                    dan mengakses pilihan kost terbaik dengan mudah dan cepat.
-                </p>
+    <!-- LOGIN CARD -->
+    <div class="login-container">
 
-            </div>
+        <div class="login-card">
 
-        </div>
+            <h2>Login</h2>
 
-        <div class="kost-login-right">
+            <p class="subtitle">
+                Masuk untuk melanjutkan pencarian kost terbaikmu.
+            </p>
 
-            <div class="kost-login-form">
+            <?php if(session()->getFlashdata('success')) : ?>
+                <div style="
+                    background:#d1fae5;
+                    color:#065f46;
+                    padding:12px 15px;
+                    border-radius:10px;
+                    margin-bottom:20px;
+                    text-align:center;
+                    font-weight:500;
+                ">
+                    <?= session()->getFlashdata('success') ?>
+                </div>
+            <?php endif; ?>
 
-                <h2 class="kost-login-title">Login</h2>
+            <?php if(session()->getFlashdata('error')) : ?>
+                <div style="
+                    background:#fee2e2;
+                    color:#991b1b;
+                    padding:12px 15px;
+                    border-radius:10px;
+                    margin-bottom:20px;
+                    text-align:center;
+                    font-weight:500;
+                ">
+                    <?= session()->getFlashdata('error') ?>
+                </div>
+            <?php endif; ?>
 
-                <p class="kost-login-subtitle">
-                    Masuk untuk melanjutkan pencarian kost terbaikmu
-                </p>
+            <form action="/login" method="post">
 
-                <div class="kost-login-group">
+                <!-- EMAIL -->
+                <div class="input-group">
+
                     <label>Email</label>
-                    <input type="email"
-                           class="kost-login-input">
+
+                    <input
+                        type="email"
+                        name="email"
+                        class="form-control"
+                        placeholder="Masukkan email"
+                        required
+                    >
                 </div>
 
-                <div class="kost-login-group">
-                    <label>Sandi</label>
-                    <input type="password"
-                           class="kost-login-input">
+                <!-- PASSWORD -->
+                <div class="input-group">
+
+                    <label>Password</label>
+
+                    <input
+                        type="password"
+                        name="password"
+                        class="form-control"
+                        placeholder="Masukkan password"
+                        required
+                    >
+
                 </div>
                 
-                <div class="kost-login-opsi">
 
-                    <label class="kost-login-ingat">
-                        <input type="checkbox" class="kost-login-checkbox">
-                        Simpan sandi
-                    </label>
-
-                    <a href="/forgot-password" class="kost-login-link-lupa">
-                        Lupa sandi?
-                    </a>
-
-                </div>
-
-                <button class="kost-login-button">
-                    Masuk
+                <!-- BUTTON -->
+                <button
+                    type="submit"
+                    class="btn-login-custom"
+                >
+                    Login
                 </button>
 
-                <div class="kost-login-bottom">
-                    Belum punya akun?
-                    <a href="/register">Daftar sekarang</a>
-                </div>
+                <!-- REGISTER LINK -->
+                <p class="register-text">
 
-            </div>
+                    Belum punya akun?
+
+                    <a href="/register">
+                        Daftar sekarang
+                    </a>
+
+                </p>
+
+            </form>
 
         </div>
 
     </div>
-
-</div>
-
 <style>
-
 
 /* ===== BODY ===== */
 body{
@@ -82,308 +114,213 @@ body{
     color:var(--dark);
 }
 
-/* =========================
-   LOGIN PAGE
-========================= */
+/* ===== LOGIN PAGE ===== */
+.login-page{
+    position: relative;
+    min-height: 70vh;
 
-.kost-login-page{
-    width:100%;
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:0px;
-    background:#f3f5fb;
-    font-family:'Poppins',sans-serif;
-}
+    background-image: url('../img/login.jpg');
+    background-size: cover;
+    background-position: center;
 
-/* =========================
-   CONTAINER
-========================= */
-
-.kost-login-container{
-    width: 100%;
-    max-width: 800px;  
-    height: 90vh;       
     display: flex;
-    border-radius: 30px;
-    overflow: hidden;
-    background: #fff;
-    box-shadow: 0 15px 40px rgba(0,0,0,.08);
-}
-/* =========================
-   LEFT SIDE
-========================= */
+    justify-content: center;
+    align-items: center;
 
-.kost-login-left{
-    width:45%;
-    position:relative;
-
-    background:
-    linear-gradient(
-        rgba(31,42,68,.85),
-        rgba(31,42,68,.85)
-    ),
-    url('https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200');
-
-    background-size:cover;
-    background-position:center;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    padding:30px;
+    padding: 80px 10px;
 }
 
-/* =========================
-   LEFT CONTENT
-========================= */
+/* ===== OVERLAY ===== */
+.background-overlay{
+    position: absolute;
+    inset: 0;
 
-.kost-login-left-content{
-    color:white;
-    position:relative;
-    z-index:2;
-}
-
-.kost-login-left-content h1{
-    font-size:40px;
-    font-weight:700;
-    margin-bottom:20px;
-}
-
-.kost-login-left-content h1 span{
-    color:#3461ff;
-}
-
-.kost-login-left-content p{
-    font-size:15px;
-    line-height:1.7;
-    color:#dce4ff;
-}
-
-/* =========================
-   RIGHT SIDE
-========================= */
-
-.kost-login-right{
-    width:55%;
-    height: 100%;
-    display:flex;
-    justify-content:flex-start;
-    align-items:center;
-    padding:35px;
-    padding-top: 20px;
-    background:#fff;
-}
-
-/* =========================
-   FORM
-========================= */
-
-.kost-login-form{
-    width:100%;
-    max-width:380px;
-    
-}
-
-.kost-login-title{
-    font-size:30px;
-    color:#3461ff;
-    margin-bottom:10px;
-    font-weight:700;
-}
-
-.kost-login-subtitle{
-    color:#6b7280;
-    margin-bottom:25px;
-    font-size:15px;
-}
-
-/* =========================
-   ALERT MESSAGES
-========================= */
-
-.kost-login-success{
-    background:#d1fae5;
-    color:#065f46;
-    padding:12px;
-    border-radius:12px;
-    margin-bottom:15px;
-    text-align:center;
-}
-
-.kost-login-error{
-    background:#fee2e2;
-    color:#991b1b;
-    padding:12px;
-    border-radius:12px;
-    margin-bottom:15px;
-    text-align:center;
-}
-
-/* =========================
-   INPUT FIELDS
-========================= */
-
-.kost-login-group{
-    margin-bottom:15px;
-}
-
-.kost-login-group label{
-    display:block;
-    margin-bottom:5px;
-    font-size:13px;
-    font-weight:600;
-}
-
-.kost-login-input{
-    width:100%;
-    height:48px;
-
-    border:1px solid #dbe2f0;
-    border-radius:14px;
-
-    padding:0 18px;
-
-    font-size:14px;
-
-    background: #fff;
-
-    transition:.3s;
-}
-
-.kost-login-input:focus{
-    outline:none;
-    border-color: #3461ff;
-    box-shadow:0 0 10px rgba(52,97,255,.15);
-    background: #ffffff;
-}
-
-/* =========================
-   LOGIN OPTIONS
-========================= */
-
-.kost-login-opsi{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:15px;
-    font-size:13px;
-    gap:10px;
-}
-
-/* =========================
-   REMEMBER ME
-========================= */
-
-.kost-login-ingat{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    color:#6b7280;
-    cursor:pointer;
-    user-select:none;
-}
-
-/* checkbox */
-.kost-login-checkbox{
-    width:15px;
-    height:15px;
-    accent-color:#3461ff;
-    cursor:pointer;
-}
-
-/* =========================
-   FORGOT PASSWORD LINK
-========================= */
-
-.kost-login-link-lupa{
-    color:#3461ff;
-    font-weight:600;
-    text-decoration:none;
-    transition:.2s;
-}
-
-.kost-login-link-lupa:hover{
-    text-decoration:underline;
-}
-
-/* =========================
-   BUTTON
-========================= */
-
-.kost-login-button{
-    width:100%;
-    height:48px;
-
-    border:none;
-    border-radius:14px;
-
-    background:linear-gradient(
-        90deg,
-        #2f5bea,
-        #3461ff
+    background: linear-gradient(
+        135deg,
+        rgba(15,23,42,0.82),
+        rgba(30,41,59,0.70)
     );
+}
 
-    color:white;
-    font-size:15px;
-    font-weight:600;
+/* ===== CONTAINER ===== */
+.login-container{
+    position: relative;
+    z-index: 2;
 
-    cursor:pointer;
+    width: 100%;
+    max-width: 470px;
+}
 
-    margin-top:5px;
+/* ===== CARD ===== */
+.login-card{
+    background: rgba(255,255,255,0.92);
 
-    transition:.3s;
+    backdrop-filter: blur(12px);
+
+    padding: 50px 45px;
+
+    border-radius: 28px;
+
+    border: 1px solid rgba(255,255,255,0.3);
 
     box-shadow:
-    0 8px 20px rgba(52,97,255,.25);
+        0 10px 30px rgba(0,0,0,0.10),
+        0 4px 12px rgba(0,0,0,0.05);
+
+    transition: 0.3s ease;
 }
 
-.kost-login-button:hover{
-    transform:translateY(-2px);
+/* ===== CARD HOVER ===== */
+.login-card:hover{
+    transform: translateY(-4px);
 }
 
-/* =========================
-   BOTTOM TEXT
-========================= */
-
-.kost-login-bottom{
-    text-align:center;
-    margin-top:15px;
-    font-size:13px;
-    color:#6b7280;
+/* ===== TITLE ===== */
+.login-card h2{
+    font-size: 42px;
+    color: #0f172a;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: -1px;
 }
 
-.kost-login-bottom a{
-    text-decoration:none;
-    color:#3461ff;
-    font-weight:600;
+/* ===== SUBTITLE ===== */
+.subtitle{
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 35px;
+    font-size: 15px;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* ===== INPUT GROUP ===== */
+.input-group{
+    margin-bottom: 24px;
+}
 
-@media(max-width:900px){
+/* ===== LABEL ===== */
+label{
+    display: block;
+    margin-bottom: 10px;
 
-    .kost-login-container{
-        flex-direction:column;
-        width:100%;
+    color: #1e293b;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* ===== INPUT ===== */
+.form-control{
+    width: 100%;
+    height: 58px;
+
+    border: 1px solid #dbe2ea;
+    border-radius: 16px;
+
+    padding: 0 18px;
+
+    font-size: 15px;
+    color: #0f172a;
+
+    background: rgba(255,255,255,0.9);
+
+    transition: all 0.3s ease;
+
+    box-shadow: none !important;
+}
+
+/* ===== PLACEHOLDER ===== */
+.form-control::placeholder{
+    color: #94a3b8;
+}
+
+/* ===== INPUT FOCUS ===== */
+.form-control:focus{
+    border-color: #2563eb;
+
+    background: white;
+
+    box-shadow:
+        0 0 0 4px rgba(37,99,235,0.10) !important;
+
+    outline: none;
+}
+
+/* ===== BUTTON ===== */
+.btn-login-custom{
+    width: 100%;
+    height: 58px;
+
+    border: none;
+    border-radius: 16px;
+
+    background: linear-gradient(
+        135deg,
+        #1e293b,
+        #2563eb
+    );
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+    margin-top: 10px;
+
+    box-shadow:
+        0 10px 20px rgba(37,99,235,0.20);
+}
+
+/* ===== BUTTON HOVER ===== */
+.btn-login-custom:hover{
+    transform: translateY(-2px);
+
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #1d4ed8
+    );
+}
+
+/* ===== EXTRA TEXT ===== */
+.extra-text{
+    text-align: center;
+    margin-top: 25px;
+
+    color: #64748b;
+    font-size: 14px;
+}
+
+.extra-text a{
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width: 576px){
+
+    .login-page{
+        padding: 80px 18px;
     }
 
-    .kost-login-left,
-    .kost-login-right{
-        width:100%;
+    .login-card{
+        padding: 35px 28px;
+        border-radius: 24px;
     }
 
-    .kost-login-left{
-        min-height:250px;
+    .login-card h2{
+        font-size: 34px;
     }
 
-    .kost-login-right{
-        padding:30px 25px;
+    .subtitle{
+        font-size: 14px;
     }
+
 }
 
 </style>
+</section>
+<?= $this->include('home/footer'); ?>

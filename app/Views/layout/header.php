@@ -154,20 +154,18 @@ body{
 }
 
 .profile-toggle{
-
-    width:78px;
-    height:50px;
+    height:39px;
 
     border:none;
     border-radius:40px;
 
-    background:  white;
+    background:white;
 
     display:flex;
     align-items:center;
-    justify-content:space-between;
+    gap:12px;
 
-    padding:0 10px 0 14px;
+    padding:0 14px;
 
     cursor:pointer;
 
@@ -175,6 +173,8 @@ body{
     0 8px 24px rgba(0,0,0,.08);
 
     transition:.25s;
+
+    width:auto;
 }
 
 .profile-toggle:hover{
@@ -183,14 +183,14 @@ body{
 
 .profile-toggle i{
 
-    font-size:15px;
+    font-size:16px;
     color: #444;
 }
 
 .profile-icon{
 
-    width:34px;
-    height:34px;
+    width:33px;
+    height:33px;
 
     border-radius:50%;
 
@@ -260,6 +260,10 @@ body{
 
 .dropdown-item:hover{
     background:#f5f5f5;
+}
+
+.logout-item{
+    color: #dc2626;
 }
 
 /* =========================
@@ -898,8 +902,7 @@ body{
 
     <div class="logo">
 
-        <img src="img/logo.png"
-        alt="Logo KostSaya">
+        <img src="<?= base_url('img/logo.png') ?>" alt="Logo KostSaya">
 
         <h1>
             Kost<span>Saya</span>
@@ -928,33 +931,41 @@ body{
 
     <div class="profile-menu-wrapper">
 
-        <button class="profile-toggle"
-        id="profileToggle">
+    <button class="profile-toggle" id="profileToggle">
 
-            <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-bars"></i>
+            <?php if(session()->get('user')) : ?>
+                <div class="profile-icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            <?php endif; ?>
 
-            <div class="profile-icon">
-
-                <i class="fa-solid fa-user"></i>
-
-            </div>
-
-        </button>
+    </button>
 
         <!-- DROPDOWN -->
 
-        <div class="profile-dropdown"
-        id="profileDropdown">
+        <div class="profile-dropdown" id="profileDropdown">
 
-            <a href="<?= base_url('login') ?>"
-            class="dropdown-item">
-                Login
-            </a>
+            <?php if(session()->get('user')) : ?>
 
-            <a href="<?= base_url('bantuan') ?>"
-            class="dropdown-item">
+                <a href="<?= base_url('profil') ?>" class="dropdown-item">
+                    Profil Saya
+                </a>
+
+                <a href="<?= base_url('logout') ?>" class="dropdown-item logout-item">
+                    Keluar
+                </a>
+
+            <?php else : ?>
+
+                <a href="<?= base_url('login') ?>" class="dropdown-item">
+                    Login
+                </a>
+
+            <?php endif; ?>
+
+            <a href="<?= base_url('bantuan') ?>" class="dropdown-item">
                 Bantuan
-
             </a>
 
         </div>
