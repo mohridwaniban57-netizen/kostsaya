@@ -1,7 +1,5 @@
 <?= $this->include('home/header'); ?>
 
-
-
 <section class="login-page">
 
     <!-- BACKGROUND IMAGE -->
