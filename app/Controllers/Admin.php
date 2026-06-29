@@ -170,7 +170,52 @@ class Admin extends BaseController
 
         return view('admin/kos/detail',$data);
     }
-    
+    public function terima($id)
+    {
+        $this->kosModel->update($id,[
+            'status'=>'aktif',
+            'alasan'=>null
+        ]);
+
+        return redirect()
+            ->to('/admin/dashboard')
+            ->with(
+                'success',
+                'Kost berhasil diterima'
+            );
+    }
+    public function tolak($id)
+    {
+        $data['kost'] = $this->kosModel
+            ->find($id);
+
+        return view(
+            'admin/kost/tolak',
+            $data
+        );
+    }
+    public function simpanTolak($id)
+    {
+        $alasan = $this->request->getPost('alasan');
+
+
+        $this->kosModel->update($id,[
+
+            'status'=>'ditolak',
+
+            'alasan'=>$alasan
+
+        ]);
+
+
+        return redirect()
+            ->to('/admin/dashboard')
+            ->with(
+                'success',
+                'Kost berhasil ditolak'
+            );
+    }
+        
     
     
 }

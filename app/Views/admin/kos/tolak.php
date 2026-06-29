@@ -8,23 +8,22 @@
 Alasan Penolakan Kost
 </h2>
 
+<h3>
+<?= $kost['nama_kos'] ?>
+</h3>
+
+
 <form action="/admin/kost/tolak/simpan/<?= $kost['kos_id'] ?>" method="post">
 
-<label>
-Alasan
-</label>
-
-<textarea 
-name="alasan"
-required
-placeholder="Masukkan alasan kost ditolak"></textarea>
+<textarea name="alasan" placeholder="Masukkan alasan penolakan..." required></textarea>
 
 
-<button>
-Tolak Kost
+<button type="submit">
+Kirim Penolakan
 </button>
 
 </form>
+
 
 </div>
 
@@ -34,32 +33,32 @@ Tolak Kost
 <style>
 
 .content{
-    margin-left:260px;
-    padding:30px;
-    background:#f8fafc;
+margin-left:260px;
+padding:30px;
+background:#f8fafc;
 }
 
 .section{
-    background:white;
-    padding:25px;
-    border-radius:20px;
+background:white;
+padding:25px;
+border-radius:20px;
 }
 
 textarea{
-    width:100%;
-    height:120px;
-    margin-top:10px;
-    padding:15px;
-    border-radius:10px;
+width:100%;
+height:150px;
+padding:15px;
+border-radius:10px;
+border:1px solid #ddd;
 }
 
 button{
-    margin-top:15px;
-    padding:10px 20px;
-    border:0;
-    border-radius:10px;
-    background:#dc2626;
-    color:white;
+margin-top:15px;
+padding:12px 20px;
+background:#dc2626;
+color:white;
+border:none;
+border-radius:10px;
 }
 
 </style>
