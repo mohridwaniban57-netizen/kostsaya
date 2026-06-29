@@ -151,6 +151,26 @@ class Admin extends BaseController
             'message' => 'Data kost berhasil dihapus'
         ]);
     }
+    public function detail($id)
+    {
+        $data['kost'] = $this->kosModel
+            ->select('kos.*, users.nama')
+            ->join(
+                'users',
+                'users.user_id = kos.pemilik_id'
+            )
+            ->where('kos_id',$id)
+            ->first();
+
+        if(!$data['kost']){
+            return redirect()
+                ->to('/admin/dashboard')
+                ->with('error','Data kost tidak ditemukan');
+        }
+
+        return view('admin/kos/detail',$data);
+    }
+    
     
     
 }

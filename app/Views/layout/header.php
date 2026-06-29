@@ -928,17 +928,19 @@ body{
     </div>
 
     <!-- PROFILE -->
-
     <div class="profile-menu-wrapper">
 
     <button class="profile-toggle" id="profileToggle">
 
         <i class="fa-solid fa-bars"></i>
-            <?php if(session()->get('user')) : ?>
-                <div class="profile-icon">
-                    <i class="fa-solid fa-user"></i>
-                </div>
-            <?php endif; ?>
+
+        <?php if(session()->has('user_id')) : ?>
+
+            <div class="profile-icon">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+        <?php endif; ?>
 
     </button>
 
@@ -946,7 +948,7 @@ body{
 
         <div class="profile-dropdown" id="profileDropdown">
 
-            <?php if(session()->get('user')) : ?>
+            <?php if(session()->get('user_id')) : ?>
 
                 <a href="<?= base_url('profil') ?>" class="dropdown-item">
                     Profil Saya

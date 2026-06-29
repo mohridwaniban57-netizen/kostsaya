@@ -115,7 +115,7 @@ $routes->post('/pembayaran/upload', 'Pembayaran::upload');
 // ======================================================
 // ADMIN
 // ======================================================
-$routes->get('/admin/dashboard', 'Admin::dashboard');
+$routes->get('/admin/dashboard','Admin::dashboard');
 
 $routes->get('/admin/kost/detail/(:num)', 'Admin::detail/$1');
 
