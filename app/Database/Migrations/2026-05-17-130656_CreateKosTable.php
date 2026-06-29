@@ -43,6 +43,38 @@ class CreateKosTable extends Migration
                 'null'       => true,
             ],
 
+            'deskripsi' => [
+                'type' => 'TEXT',
+                'null' => true,
+            ],
+
+            'fasilitas' => [
+                'type' => 'TEXT',
+                'null' => true,
+            ],
+
+            'status' => [
+                'type'       => 'ENUM',
+                'constraint' => [
+                    'draft',
+                    'pending',
+                    'aktif',
+                    'ditolak'
+                ],
+                'default' => 'draft',
+            ],
+
+            'tipekost' => [
+                'type'       => 'VARCHAR',
+                'constraint' => 50,
+                'null'       => true,
+            ],
+
+            'alasan' => [
+                'type' => 'TEXT',
+                'null' => true,
+            ],
+
             'created_at' => [
                 'type' => 'DATETIME',
                 'null' => true,
@@ -52,9 +84,10 @@ class CreateKosTable extends Migration
                 'type' => 'DATETIME',
                 'null' => true,
             ],
+
             'deleted_at' => [
                 'type' => 'DATETIME',
-                'null' => 'null',
+                'null' => true,
             ],
 
         ]);

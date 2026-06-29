@@ -15,31 +15,40 @@ class Admin extends BaseController
 
     // Dashboard
     public function dashboard()
-    {
-        $data = [
-            'totalKos' => $this->kosModel->countAllResults()
-        ];
+{
+    $db = \Config\Database::connect();
 
-        return view('admin/dashboard', $data);
-    }
+    $data = [
+        'totalUser' => $db->table('users')
+            ->countAll(),
 
-    // Menampilkan Data Kost
-    public function index()
-    {
-        $currentPage = $this->request->getVar('page_kos') ?? 1;
+        'totalPemilik' => $db->table('users')
+            ->where('role','pemilik')
+            ->countAllResults(),
 
-        $data['kos'] = $this->kosModel->paginate(10, 'kos');
-        $data['pager'] = $this->kosModel->pager;
-        $data['currentPage'] = $currentPage;
+        'totalKost' => $this->kosModel
+            ->countAll(),
 
-        return view('admin/kos/index', $data);
-    }
+        'kostPending' => $this->kosModel
+            ->where('status','pending')
+            ->countAllResults(),
 
-    // Form Tambah Kost
-    public function create()
-    {
-        return view('admin/kos/create');
-    }
+        'kostPendingList' => $this->kosModel
+            ->select('kos.*, users.nama as nama_pemilik')
+            ->join(
+                'users',
+                'users.user_id = kos.pemilik_id'
+            )
+            ->where('kos.status','pending')
+            ->findAll(),
+
+        'totalKamar' => 0,
+
+        'totalPembayaran' => 0
+    ];
+
+    return view('admin/dashboard',$data);
+}
 
     // Simpan Data Kost
     public function store()
@@ -142,4 +151,6 @@ class Admin extends BaseController
             'message' => 'Data kost berhasil dihapus'
         ]);
     }
+    
+    
 }

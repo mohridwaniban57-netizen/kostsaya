@@ -66,20 +66,30 @@ $routes->get('/kamar/edit/(:num)', 'Kamar::edit/$1');
 $routes->post('/kamar/update/(:num)', 'Kamar::update/$1');
 
 $routes->get('/kamar/delete/(:num)', 'Kamar::delete/$1');
-$routes->get('/pemilik/data-kos', 'pemilikKosController::index');
 
-$routes->get('/pemilik/tambah-kos', 'pemilikKosController::tambah');
 
-$routes->get('/pemilik/edit-kos/(:num)', 'pemilikKosController::edit/$1');
+//PEMILIK KOST
 
-$routes->get('/pemilik/hapus-kos/(:num)', 'pemilikKosController::hapus/$1');
 
-// Booking Masuk
-$routes->get('/pemilik/booking', 'pemilikBookingController::index');
+$routes->get('pemilik/dashboard', 'pemilik::dashboard');
 
-// Profil Pemilik
-$routes->get('/pemilik/profil', 'pemilikController::profil');
+$routes->get('pemilik/kost', 'pemilik::kost');
 
+$routes->get('pemilik/tambah-kost', 'pemilik::tambahKost');
+
+$routes->post('pemilik/simpan-kost', 'pemilik::simpanKost');
+
+$routes->get('pemilik/detail-kost/(:num)','Pemilik::detailKost/$1');
+
+$routes->get('pemilik/kost/detail/(:num)','Pemilik::detailKost/$1');
+
+$routes->get('pemilik/edit-kost/(:num)','pemilik::editKost/$1');
+
+$routes->post('pemilik/update-kost/(:num)','pemilik::updateKost/$1');
+
+$routes->get('pemilik/kost/detail/(:num)','pemilik::detailKost/$1');
+
+$routes->get('pemilik/hapus-kost/(:num)','Pemilik::hapusKost/$1');
 
 // ======================================================
 // BOOKING
@@ -105,9 +115,17 @@ $routes->post('/pembayaran/upload', 'Pembayaran::upload');
 // ======================================================
 // ADMIN
 // ======================================================
+$routes->get('/admin/dashboard', 'Admin::dashboard');
 
-$routes->get('/admin', 'Admin::dashboard');
-// $routes->get('/admin/dashboard', 'Admin::dashboard');
+$routes->get('/admin/kost/detail/(:num)', 'Admin::detail/$1');
+
+$routes->get('/admin/kost/terima/(:num)', 'Admin::terima/$1');
+
+$routes->post('/admin/kost/tolak/(:num)', 'Admin::tolak/$1');
+
+$routes->post('/admin/kost/tolak/simpan/(:num)','Admin::simpanTolak/$1');
+
+$routes->get('/logout', 'Auth::logout');
 
 // DATA KOST
 $routes->get('/admin/kost', 'Admin::index');
