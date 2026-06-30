@@ -31,6 +31,7 @@ $routes->post('/login/attempt', 'Auth::attempt');
 $routes->get('/register', 'Auth::register');
 $routes->post('/register', 'Auth::store');
 $routes->get('/admin/dashboard', 'Admin::dashboard', ['filter' => 'auth']);
+$routes->get('pemilik/dashboard', 'pemilik::dashboard', ['filter' => 'auth']);
 $routes->get('/logout', 'Auth::logout');
 
 // ======================================================
@@ -154,20 +155,11 @@ $routes->get('/tentangkami', 'tentangKami::index');
 $routes->get('/bantuan', 'bantuan::index');
 
 //beranda ke detail
-$routes->get(
-'jelajahi',
-'Jelajahi::index'
-);
+$routes->get('jelajahi','Jelajahi::index');
 
-$routes->get(
-'detail/(:num)',
-'beranda::detail/$1'
-);
+$routes->get('detail/(:num)','beranda::detail/$1');
 
-$routes->get(
-'favorit/detail/(:num)',
-'Favorit::detail/$1'
-);
+$routes->get('favorit/detail/(:num)','Favorit::detail/$1');
 
 
 

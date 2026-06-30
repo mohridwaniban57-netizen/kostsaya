@@ -15,7 +15,7 @@ class Admin extends BaseController
 
     // Dashboard
     public function dashboard()
-{
+    {
     $db = \Config\Database::connect();
 
     $data = [
@@ -48,9 +48,7 @@ class Admin extends BaseController
     ];
 
     return view('admin/dashboard',$data);
-}
-
-    // Simpan Data Kost
+    }
     public function store()
     {
         $rules = [
@@ -59,25 +57,19 @@ class Admin extends BaseController
             'harga'    => 'required|numeric',
             'foto'     => 'uploaded[foto]|max_size[foto,2048]|is_image[foto]'
         ];
-
         if (!$this->validate($rules)) {
             return redirect()->back()
                 ->withInput()
                 ->with('errors', $this->validator->getErrors());
         }
-
-        // Upload Foto
         $foto = $this->request->getFile('foto');
-
         $namaFoto = null;
-
         if ($foto->isValid() && !$foto->hasMoved()) {
 
             $namaFoto = $foto->getRandomName();
 
             $foto->move('uploads', $namaFoto);
         }
-
         $this->kosModel->save([
             'pemilik_id' => 1, // sementara
             'nama_kos'   => $this->request->getPost('nama_kos'),
@@ -91,16 +83,12 @@ class Admin extends BaseController
             'message' => 'Data kost berhasil ditambahkan'
         ]);
     }
-
-    // Form Edit
     public function edit($id)
     {
         $data['kost'] = $this->kosModel->find($id);
 
         return view('admin/kos/edit', $data);
     }
-
-    // Update Data Kost
     public function update($id)
     {
         $kost = $this->kosModel->find($id);
@@ -112,7 +100,6 @@ class Admin extends BaseController
         ];
 
         $foto = $this->request->getFile('foto');
-
         if ($foto && $foto->isValid() && !$foto->hasMoved()) {
 
             $namaFoto = $foto->getRandomName();
@@ -123,7 +110,6 @@ class Admin extends BaseController
             if (!empty($kost['foto']) && file_exists('uploads/' . $kost['foto'])) {
                 unlink('uploads/' . $kost['foto']);
             }
-
             $dataUpdate['foto'] = $namaFoto;
         }
 
@@ -134,8 +120,6 @@ class Admin extends BaseController
             'message' => 'Data kost berhasil diperbarui'
         ]);
     }
-
-    // Hapus Data Kost
     public function delete($id)
     {
         $kost = $this->kosModel->find($id);
@@ -161,13 +145,11 @@ class Admin extends BaseController
             )
             ->where('kos_id',$id)
             ->first();
-
         if(!$data['kost']){
             return redirect()
                 ->to('/admin/dashboard')
                 ->with('error','Data kost tidak ditemukan');
         }
-
         return view('admin/kos/detail',$data);
     }
     public function terima($id)
@@ -197,8 +179,6 @@ class Admin extends BaseController
     public function simpanTolak($id)
     {
         $alasan = $this->request->getPost('alasan');
-
-
         $this->kosModel->update($id,[
 
             'status'=>'ditolak',
@@ -206,8 +186,6 @@ class Admin extends BaseController
             'alasan'=>$alasan
 
         ]);
-
-
         return redirect()
             ->to('/admin/dashboard')
             ->with(
