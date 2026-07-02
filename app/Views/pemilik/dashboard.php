@@ -143,9 +143,95 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
     <?php endif; ?>
 
+<?php if(!empty($kost_ditolak)): ?>
+
+<div class="reject-box">
+
+<h2>
+<i class="fas fa-circle-xmark"></i>
+ Kost Ditolak
+</h2>
+
+
+<?php foreach($kost_ditolak as $kost): ?>
+
+<div class="reject-card">
+
+<h3>
+<?= $kost['nama_kos'] ?>
+</h3>
+
+
+<p>
+<b>Alasan Penolakan:</b>
+</p>
+
+
+<p>
+<?= $kost['alasan'] ?>
+</p>
+
+
+<a href="<?= base_url('pemilik/kost/edit/'.$kost['kos_id']) ?>">
+Perbaiki Kost
+</a>
+
+
+<a href="<?= base_url('pemilik/kost/kirim-ulang/'.$kost['kos_id']) ?>">
+Kirim Pengajuan Ulang
+</a>
+
+
+</div>
+
+
+<?php endforeach; ?>
+
+
+</div>
+
+<?php endif; ?>
+
 </div>
 
 <style>
+.reject-card a:last-child{
+
+    background:#16a34a;
+    margin-left:10px;
+
+}
+
+.reject-box{
+    margin-top:25px;
+    background:#fee2e2;
+    padding:25px;
+    border-radius:20px;
+    color:#991b1b;
+}
+
+
+.reject-card{
+
+    background:white;
+    padding:20px;
+    margin-top:15px;
+    border-radius:15px;
+
+}
+
+
+.reject-card a{
+
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 15px;
+    background:#dc2626;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+
+}
 
 body{
     background:#f8fafc;

@@ -12,28 +12,49 @@ class Pemilik extends BaseController
 
         $pemilikId = session()->get('user_id');
 
+
         $total_kost = $kosModel
             ->where('pemilik_id', $pemilikId)
             ->countAllResults();
+
 
         $kost_aktif = $kosModel
             ->where('pemilik_id', $pemilikId)
             ->where('status', 'aktif')
             ->countAllResults();
 
+
         $kost_pending = $kosModel
             ->where('pemilik_id', $pemilikId)
             ->where('status', 'pending')
             ->countAllResults();
 
+
+        // Ambil kost yang ditolak beserta alasan
+        $kost_ditolak = $kosModel
+            ->where('pemilik_id', $pemilikId)
+            ->where('status','ditolak')
+            ->findAll();
+
+
         $data = [
+
             'total_kost'    => $total_kost,
+
             'kost_aktif'    => $kost_aktif,
+
             'kost_pending'  => $kost_pending,
+
+            'kost_ditolak'  => $kost_ditolak,
+
             'total_kamar'   => 0,
+
             'booking_masuk' => 0,
+
             'pendapatan'    => 0,
+
         ];
+
 
         return view('pemilik/dashboard', $data);
     }
@@ -182,7 +203,40 @@ class Pemilik extends BaseController
             ->to('/pemilik/kost')
             ->with(
                 'success',
-                'Data kost berhasil diperbarui.'
+                'Data kost berhasil diperbarui. Silahkan kirim pengajuan ulang.'
+            );
+    }
+    public function kirimUlang($id)
+    {
+        $kosModel = new KosModel();
+
+        $kos = $kosModel
+            ->where('kos_id',$id)
+            ->where('pemilik_id',session()->get('user_id'))
+            ->first();
+
+
+        if(!$kos){
+
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+
+        }
+
+
+        $kosModel->update($id,[
+
+            'status'=>'pending',
+
+            'alasan'=>null
+
+        ]);
+
+
+        return redirect()
+            ->to('/pemilik/kost')
+            ->with(
+                'success',
+                'Pengajuan kost berhasil dikirim kembali ke admin.'
             );
     }
     public function hapusKost($id)

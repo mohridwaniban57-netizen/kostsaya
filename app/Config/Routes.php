@@ -86,6 +86,10 @@ $routes->get('pemilik/kost/detail/(:num)','Pemilik::detailKost/$1');
 
 $routes->get('pemilik/edit-kost/(:num)','pemilik::editKost/$1');
 
+$routes->get('pemilik/kost/edit/(:num)', 'pemilik::editKost/$1');
+
+$routes->get('pemilik/kost/kirim-ulang/(:num)','Pemilik::kirimUlang/$1');
+
 $routes->post('pemilik/update-kost/(:num)','pemilik::updateKost/$1');
 
 $routes->get('pemilik/kost/detail/(:num)','pemilik::detailKost/$1');
@@ -122,13 +126,14 @@ $routes->get('/admin/kost/detail/(:num)', 'Admin::detail/$1');
 
 $routes->get('/admin/kost/terima/(:num)', 'Admin::terima/$1');
 
-$routes->post('/admin/kost/tolak/(:num)', 'Admin::tolak/$1');
+$routes->get('/admin/kost/tolak/(:num)', 'Admin::tolak/$1');
 
 $routes->post('/admin/kost/tolak/simpan/(:num)','Admin::simpanTolak/$1');
 
 $routes->get('/logout', 'Auth::logout');
 
 // DATA KOST
+
 $routes->get('/admin/kost', 'Admin::index');
 
 $routes->get('/admin/kost/create', 'Admin::create');

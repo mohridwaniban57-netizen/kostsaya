@@ -25,13 +25,7 @@ class Auth extends BaseController
             )
         ) {
 
-            session()->set([
-                'user_id' => $user['user_id'],
-                'nama'    => $user['nama'],
-                'email'   => $user['email'],
-                'role'    => $user['role'],
-                'isLoggedIn' => true
-            ]);
+            session()->set(['user_id' => $user['user_id'],'nama'    => $user['nama'],'email'   => $user['email'],'role'    => $user['role'],'isLoggedIn' => true]);
 
             if ($user['role'] == 'admin') {
 

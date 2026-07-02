@@ -172,13 +172,24 @@ class Admin extends BaseController
             ->find($id);
 
         return view(
-            'admin/kost/tolak',
+            'admin/kos/tolak',
             $data
         );
     }
     public function simpanTolak($id)
     {
         $alasan = $this->request->getPost('alasan');
+
+
+        if(empty($alasan)){
+
+            return redirect()
+            ->back()
+            ->with('error','Alasan wajib diisi');
+
+        }
+
+
         $this->kosModel->update($id,[
 
             'status'=>'ditolak',
@@ -186,6 +197,8 @@ class Admin extends BaseController
             'alasan'=>$alasan
 
         ]);
+
+
         return redirect()
             ->to('/admin/dashboard')
             ->with(
